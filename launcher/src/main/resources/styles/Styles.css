@@ -1,0 +1,33 @@
+.splash {
+    -fx-font-family: Helvetica Neue, Helvetica, sans-serif;
+    -fx-background-color: #FDCC52;
+}
+
+.splash #titleLabel {
+    -fx-font-size: 36px;
+    -fx-text-fill: #333;
+}
+
+.splash #statusLabel {
+    -fx-font-size: 15px;
+    -fx-text-fill: #EC4067;
+}
+
+.splash .prog {
+    -fx-pref-height: 25;
+    -fx-progress-color: #333;
+}
+
+.splash .progress-bar {
+    -fx-pref-width: 200px;
+    -fx-accent: #EC4067;
+}
+
+.splash .footer {
+  -fx-background-color: #333;
+}
+
+.splash .footer #footerLabel {
+  -fx-font-size: 10px;
+  -fx-text-fill: #cccccc;
+}
