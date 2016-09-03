@@ -1,6 +1,7 @@
 package com.biggerconcept.epubtoolbox.actions;
 
 import com.biggerconcept.epubtoolbox.checkers.*;
+import com.biggerconcept.epubtoolbox.utilities.*;
 import java.io.File;
 
 public class ActionFactory {    
@@ -29,6 +30,34 @@ public class ActionFactory {
                 "unknown checker");
         
         return returnChecker;
+    }
+    
+    public static Utility createUtility (
+            String checkerClass, File target, File outTarget) {
+        
+        Utility returnUtil;
+        
+        switch(checkerClass) {
+            case "Unpack Utility":
+                returnUtil = new UnpackUtility(target, outTarget);
+                break;
+            case "Pack Utility":
+                returnUtil = new PackUtility(target, outTarget);
+                break;
+            case "OS Artefact Removal Utility":
+                returnUtil = new OSArtefactRemovalUtility(target, outTarget);
+                break;
+            case "Itunes Meta Removal Utility":
+                returnUtil = new ItunesMetaRemovalUtility(target, outTarget);
+                break;
+            default:
+                returnUtil = null;
+        }
+        
+        if (returnUtil == null) throw new UnsupportedOperationException(
+                "unknown utility");
+        
+        return returnUtil;
     }
     
 }

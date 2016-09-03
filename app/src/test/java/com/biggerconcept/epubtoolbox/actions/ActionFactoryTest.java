@@ -1,6 +1,7 @@
 package com.biggerconcept.epubtoolbox.actions;
 
 import com.biggerconcept.epubtoolbox.checkers.*;
+import com.biggerconcept.epubtoolbox.utilities.*;
 import java.io.File;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -61,5 +62,63 @@ public class ActionFactoryTest {
         ActionFactory.createChecker(
                 "Another Checker", 
                 new File("/path/to/some.epub"));
+    }
+    
+    @Test
+    public void testCreateUtility_when_UnpackUtility() {
+        System.out.println("#createUtility when unpack utility");
+       
+        Utility result = ActionFactory.createUtility(
+                "Unpack Utility", 
+                new File("/path/to/some.epub"),
+                new File("/path/to/output/location"));
+        
+        assertEquals(UnpackUtility.class, result.getClass());
+    }
+    
+    @Test
+    public void testCreateUtility_when_PackUtility() {
+        System.out.println("#createUtility when pack utility");
+       
+        Utility result = ActionFactory.createUtility(
+                "Pack Utility", 
+                new File("/path/to/some.epub"),
+                new File("/path/to/output/location"));
+        
+        assertEquals(PackUtility.class, result.getClass());
+    }
+    
+    @Test
+    public void testCreateUtility_when_OSArtefactRemovalUtility() {
+        System.out.println("#createUtility when os artefact removal utility");
+       
+        Utility result = ActionFactory.createUtility(
+                "OS Artefact Removal Utility", 
+                new File("/path/to/some.epub"),
+                new File("/path/to/output/location"));
+        
+        assertEquals(OSArtefactRemovalUtility.class, result.getClass());
+    }
+    
+    @Test
+    public void testCreateUtility_when_ItunesMetaRemovalUtility() {
+        System.out.println("#createUtility when itunes meta removal utility");
+       
+        Utility result = ActionFactory.createUtility(
+                "Itunes Meta Removal Utility", 
+                new File("/path/to/some.epub"),
+                new File("/path/to/output/location"));
+        
+        assertEquals(ItunesMetaRemovalUtility.class, result.getClass());
+    }
+    
+    @Test(expected=UnsupportedOperationException.class)
+    public void testCreateChecker_when_UnknownUtility() {
+        System.out.println("#createUtility when unknown utility");
+       
+        ActionFactory.createUtility(
+                "Another Util", 
+                new File("/path/to/some.epub"),
+                new File("/path/to/output/location"));
     }
 }
