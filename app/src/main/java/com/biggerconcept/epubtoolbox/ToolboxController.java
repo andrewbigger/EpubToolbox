@@ -213,9 +213,24 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleAllCheckClick(MouseEvent event) {
-        try { }
+        try {
+            // Choose epub(s) for all check
+            File inFile = makeInputChoice(false, "Choose", "for all checks");
+
+            if (inFile.exists()) {
+                Action allCheck = new CheckerAction(
+                        "All Checks", inFile, isCollectionMode());
+
+                toolbox.performAction(allCheck);
+                console.out(allCheck.getResult(), allCheck.getTask());
+            }
+
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("All checks", e);
         }
     }
     
