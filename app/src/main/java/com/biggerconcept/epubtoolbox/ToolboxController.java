@@ -144,9 +144,24 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleEpubCheckClick(MouseEvent event) {
-        try { }
+        try {
+            // Choose epub(s) for epubcheck
+            File inFile = makeInputChoice(false, "Choose", "for epub check");
+
+            if (inFile.exists()) {
+                Action epubCheck = new CheckerAction(
+                        "Epub Checker", inFile, isCollectionMode());
+
+                toolbox.performAction(epubCheck);
+                console.out(epubCheck.getResult(), epubCheck.getTask());
+            }
+
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("Epub check", e);
         }
     }
     
