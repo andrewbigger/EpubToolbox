@@ -1,0 +1,32 @@
+.main-toolbar-button {
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+}
+
+#unpackButton {
+  -fx-background-image:url('../assets/unpack.png');
+}
+
+#packButton {
+  -fx-background-image:url('../assets/packAction.png');
+}
+
+#pickButton {
+  -fx-background-image:url('../assets/pick.png');
+}
+
+#epubCheckButton {
+  -fx-background-image:url('../assets/checkIcon.png');
+}
+
+#imageCheckButton {
+  -fx-background-image:url('../assets/imageCheckIcon.png');
+}
+
+#sizeCheckButton {
+  -fx-background-image:url('../assets/sizeCheckIcon.png');
+}
+
+#allCheckButton {
+  -fx-background-image:url('../assets/allCheckIcon.png');
+}

@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
 <?import javafx.scene.control.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml" fx:controller="com.biggerconcept.epubtoolbox.ToolboxController">
-    <children>
-    </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="859.0" stylesheets="@Toolbox.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biggerconcept.epubtoolbox.ToolboxController">
+   <top>
+      <BorderPane prefHeight="44.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+         <center>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button id="unpackButton" fx:id="unpackButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="packButton" fx:id="packButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <Button id="pickButton" fx:id="pickButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <Button id="epubCheckButton" fx:id="epubCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="imageCheckButton" fx:id="imageCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="sizeCheckButton" fx:id="sizeCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="allCheckButton" fx:id="allCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+              </items>
+            </ToolBar>
+         </center>
+         <right>
+            <ToolBar prefHeight="56.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+               <items>
+                  <MenuButton id="utilsMenu" fx:id="utilsMenu" mnemonicParsing="false" onAction="#handleArtefactRemove" prefHeight="26.0" prefWidth="192.0" text="Remove Files from Epub">
+                    <items>
+                      <MenuItem fx:id="rmItunesMetaButton" mnemonicParsing="false" onAction="#handleItunesMetaRemove" text="iTunesMetadata.plist" />
+                      <MenuItem fx:id="rmOsArtefactsButton" mnemonicParsing="false" onAction="#handleArtefactRemove" text="OS Artefacts (i.e. .DS_Store, thumbs.db)" />
+                    </items>
+                  </MenuButton>
+               </items>
+            </ToolBar>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <TreeView id="consoleView" fx:id="consoleView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

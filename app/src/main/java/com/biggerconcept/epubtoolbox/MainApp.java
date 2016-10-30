@@ -15,7 +15,7 @@ public class MainApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Toolbox.fxml"));
         
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Toolbox.css");
+        scene.getStylesheets().add("/fxml/Toolbox.css");
         
         stage.setTitle("EpubToolbox");
         stage.setScene(scene);
