@@ -12,15 +12,15 @@
          <center>
             <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
-                <Button id="unpackButton" fx:id="unpackButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
-                  <Button id="packButton" fx:id="packButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                <Button id="unpackButton" fx:id="unpackButton" mnemonicParsing="false" onMouseClicked="#handleUnpackClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="packButton" fx:id="packButton" mnemonicParsing="false" onMouseClicked="#handlePackClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
                   <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
-                  <Button id="pickButton" fx:id="pickButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="pickButton" fx:id="pickButton" mnemonicParsing="false" onMouseClicked="#handlePickClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
                   <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
-                  <Button id="epubCheckButton" fx:id="epubCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
-                  <Button id="imageCheckButton" fx:id="imageCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
-                  <Button id="sizeCheckButton" fx:id="sizeCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
-                  <Button id="allCheckButton" fx:id="allCheckButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="epubCheckButton" fx:id="epubCheckButton" mnemonicParsing="false" onMouseClicked="#handleEpubCheckClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="imageCheckButton" fx:id="imageCheckButton" mnemonicParsing="false" onMouseClicked="#handleImageCheckClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="sizeCheckButton" fx:id="sizeCheckButton" mnemonicParsing="false" onMouseClicked="#handleSizeCheckClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
+                  <Button id="allCheckButton" fx:id="allCheckButton" mnemonicParsing="false" onMouseClicked="#handleAllCheckClick" prefHeight="44.0" prefWidth="45.0" styleClass="main-toolbar-button" />
               </items>
             </ToolBar>
          </center>
