@@ -167,9 +167,24 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleImageCheckClick(MouseEvent event) {
-        try { }
+        try {
+            // Choose epub(s) for image check
+            File inFile = makeInputChoice(false, "Choose", "for image check");
+
+            if (inFile.exists()) {
+                Action imageSizeCheck = new CheckerAction(
+                        "Image Size Checker", inFile, isCollectionMode());
+
+                toolbox.performAction(imageSizeCheck);
+                console.out(imageSizeCheck.getResult(), imageSizeCheck.getTask());
+            }
+
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("Epub image check", e);
         }
     }
     
