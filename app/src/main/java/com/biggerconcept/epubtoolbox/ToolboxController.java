@@ -264,9 +264,30 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleItunesMetaRemove(ActionEvent event) {
-        try { }
+        try {
+            // Choose epub(s) for image itunes meta removal
+            File inFile = makeInputChoice(false, "Choose",
+                    "for itunes meta removal");
+
+            toolbox.yesNoPrompt(
+                    AlertType.CONFIRMATION,
+                    "iTunes Metadata Removal",
+                    "Are you sure you want to remove iTunes metadata from "
+                    + "this epub?");
+
+            Action itunesMetaRemoval = new UtilityAction(
+                    "Itunes Meta Removal Utility", inFile,
+                    inFile, isCollectionMode());
+            toolbox.performAction(itunesMetaRemoval);
+
+            console.out(itunesMetaRemoval.getResult(), 
+                    itunesMetaRemoval.getTask());
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("Itunes metadata removal", e);
         }
     }
 
