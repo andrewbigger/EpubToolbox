@@ -3,6 +3,7 @@ package com.biggerconcept.epubtoolbox;
 import com.biggerconcept.epubtoolbox.exceptions.NoChoiceMadeException;
 import com.biggerconcept.epubtoolbox.services.*;
 import com.biggerconcept.epubtoolbox.actions.*;
+import com.biggerconcept.epubtoolbox.utilities.PickUtility;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -112,9 +113,32 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handlePickClick(MouseEvent event) {
-        try { }
+        try {
+            File collectionLocation = makeInputChoice(true,
+                    "Choose",
+                    "collection location");
+
+            String choices = toolbox.listPrompt(
+                    "Pick ePubs from folder",
+                    "Please enter the names of the ePubs"
+                    + " you'd like to select (separated by commas):",
+                    "i.e.: 'spain.epub, madrid.epub' etc.");
+
+            String [] targets = choices.split(",");
+            File outLocation = makeInputChoice(true, "Choose",
+                    "selection output location");
+
+            PickUtility pickUtility = new PickUtility(
+                    collectionLocation, outLocation, targets);
+            pickUtility.doJob();
+
+            console.out(pickUtility.getResult(), "Pick ePubs from Folder");
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("Epub selection", e);
         }
     }
     
