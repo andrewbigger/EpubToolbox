@@ -77,9 +77,36 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handlePackClick(MouseEvent event) {
-        try { }
-        catch (Exception e) {
+        try {
+            // Choose expanded epub(s) for packing
+            File inFile = makeInputChoice(true, "Choose expanded",
+                    "for packing");
+            // Choose packed epub(s) output location
+            File outFileChoice = makeInputChoice(true, "Choose packed",
+                    "output location");
             
+            // Add epub name to output location
+            File outFile = new File(
+                    outFileChoice.getAbsolutePath() 
+                    + File.separator
+                    + inFile.getName() 
+                    + ".epub"
+            );
+            
+            if (inFile.exists() && outFileChoice.exists()) {
+                Action packAction = new UtilityAction(
+                        "Pack Utility", inFile, outFile, isCollectionMode());
+
+                toolbox.performAction(packAction);
+                console.out(packAction.getResult(), packAction.getTask());
+            }
+
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
+        catch (Exception e) {
+            console.err("Epub pack", e);
         }
     }
     
