@@ -236,9 +236,29 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleArtefactRemove(ActionEvent event) {
-        try { }
+        try {
+            File inFile = makeInputChoice(false, "Choose",
+                    "for OS artefact removal");
+
+            toolbox.yesNoPrompt(
+                    AlertType.CONFIRMATION,
+                    "OS Artefact Removal",
+                    "Are you sure you want to remove OS artefacts (like "
+                    + "thumbs.db, .DS_Store etc.) from this epub?");
+
+            Action osArtefactRemovalUtility = new UtilityAction(
+                    "OS Artefact Removal Utility", inFile, inFile,
+                    isCollectionMode());
+            toolbox.performAction(osArtefactRemovalUtility);
+
+            console.out(osArtefactRemovalUtility.getResult(), 
+                    osArtefactRemovalUtility.getTask());
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("OS Artefact removal", e);
         }
     }
     
