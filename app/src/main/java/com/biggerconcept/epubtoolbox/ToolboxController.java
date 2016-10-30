@@ -190,9 +190,24 @@ public class ToolboxController implements Initializable {
     
     @FXML
     private void handleSizeCheckClick(MouseEvent event) {
-        try { }
+        try {
+            // Choose epub(s) for file size check
+            File inFile = makeInputChoice(false, "Choose", "for file size check");
+
+            if (inFile.exists()) {
+                Action fileSizeCheck = new CheckerAction(
+                        "File Size Checker", inFile, isCollectionMode());
+
+                toolbox.performAction(fileSizeCheck);
+                console.out(fileSizeCheck.getResult(), fileSizeCheck.getTask());
+            }
+
+        }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
         catch (Exception e) {
-            
+            console.err("Epub size check", e);
         }
     }
     
