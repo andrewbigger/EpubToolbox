@@ -127,7 +127,6 @@
                 <executions>
                     <execution>
                         <id>unpack-dependencies</id>
-
                         <phase>package</phase>
                         <goals>
                             <goal>exec</goal>
@@ -238,6 +237,8 @@
                                 <argument>${project.name}</argument>
                                 <argument>-vendor</argument>
                                 <argument>${app.vendor}</argument>
+                                <argument>-Bruntime</argument>
+                                <argument>${env.JAVA_HOME}</argument>
                                 <argument>-BappVersion=${app.version}</argument>
                                 <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
                                 <argument>-Bicon=${project.basedir}/target/classes/icons/Updatable.icns</argument>
