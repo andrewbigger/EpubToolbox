@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+      <meta name="dtb:uid" content="lonely-planet-san-fran-illegal-chars-test-10"/>
+      <meta name="dtb:depth" content="1"/>
+      <meta name="dtb:maxPageNumber" content="0"/>
+      <meta name="dtb:totalPageCount" content="0"/>
+    </head>
+    <docTitle>
+      <text>Lonely Planet San Fran - ILLEGAL CHARS TEST</text>
+    </docTitle>
+    <navMap><navPoint id="ref-table-of-contents" playOrder="1"><navLabel><text>Table of Contents</text></navLabel><content src="00d-table-of-contents.xhtml"/></navPoint><navPoint id="ref-ebook-17-marina-fishermans-wharf-piers-sfo10xhtml-ref-the-marina-fishermans-wharf-the-piers" playOrder="2"><navLabel><text>The Marina, Fisherman's Wharf &amp; the Piers</text></navLabel><content src="ebook-17-marina-fishermans-wharf-piers-sfo10.xhtml#ref-the-marina-fishermans-wharf-the-piers"/></navPoint></navMap>
+    </ncx>

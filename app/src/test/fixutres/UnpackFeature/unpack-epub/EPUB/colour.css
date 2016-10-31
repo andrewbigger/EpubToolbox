@@ -1,0 +1,40 @@
+/* CITY GUIDE */
+/* --------- COLOUR SECTIONS ----------- */
+
+.narrative h1 { color: #222; }
+.narrative h3 { color: #E63323;}
+.narrative h4 { color: #005ea8;}
+
+h1 {
+  color: #E63323;
+}
+
+h2 {
+  color: #E63323;
+}
+
+h3 {
+  color: #222;
+}
+
+p.introduction-flush-left {
+  font-weight: bold;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:1em;
+  line-height:140%!important;
+  margin-bottom:.5em;
+}
+
+li {
+  padding-bottom:0.5em;
+}
+
+li strong {
+  color:#E63323;
+}
+
+.boxed-text, .box {
+  background-color: #E4DCC1;
+}
+
+p { padding-bottom:.5em; }

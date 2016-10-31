@@ -1,0 +1,113 @@
+/* CITY GUIDE */
+.title-page .heading { background-color: #53853c; border-radius:10px 0 0 10px; padding:1.3em 1em; margin-bottom:2em; }
+.title-page .heading h1 { margin:0; text-align:right; padding-right:.6em; color:#fff; }
+.title-page a { color: #53853C; }
+.title-page .list-c { font-family: Helvetica, Arial, sans-serif; }
+.title-page .genre-heading-1 {
+	text-transform:uppercase;
+	color:#53853c;
+	font-family:LPBentonSansCondBold, Arial, sans-serif;
+	font-weight:normal;
+	font-size:1.1em;
+	margin-top:1em;
+	}
+
+h1 { color:#53853c; margin:0 0 .2em 0; }
+h2 { margin-bottom:0; font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size:1.25em; }
+h3 { color:#53853c; font-size: 1.3em; }
+h4 { color:#000; font-family: Helvetica, Arial, sans-serif; margin:1em 0 .2em 0; }
+h5 { color:#53853c; font-family: Helvetica, Arial, sans-serif; font-size:1em; margin:1em 0 .2em 0; }
+h6 { font-family:Georgia, Times, serif; font-size:1em; text-transform:uppercase; font-size:1.1em; }
+.heading-7 { font-family:LPBentonSansCondBold, Helvetica, Arial, sans-serif; font-size:1em; color:#53853c; text-transform:uppercase; }
+
+h1 em { float:right; font-weight:normal; font-family:Times, "Times New Roman", serif; font-size:.35em; }
+h2 em { float:right; font-weight:normal; font-family:Times, "Times New Roman", serif; font-size:.8em; }
+h3 em { float:right; font-weight:normal; font-family:Times, "Times New Roman", serif; font-size:.8em; }
+
+.pull-quote { color:#53853c; font-family:Georgia, Times, serif; font-size:1em; font-style:italic; }
+.quote-byline { font-family: Helvetica, Arial sans-serif; font-style:italic; float:right; }
+
+.intro em { font-weight:bold; font-style:normal; font-family: Helvetica, Arial, sans-serif; }
+
+
+.best-of-box h4 { margin-bottom:0; }
+.best-of-box div:first-child h3 { margin-top:0; }
+
+h3.practical-tip-box-heading-1 {
+   border-bottom: 3px dotted #E42118;
+   color: #E42118;
+   font-family: LPBentonSansBold,Helvetica,Arial, sans-serif!important;
+   font-size: .9em;
+   text-transform:uppercase;
+   font-weight: normal;
+   margin:0 0 .6em 0;
+   padding-bottom:.3em;
+   }
+
+.understand .hr { background:#53853c; height:12px; margin:0em 0 0em 0; clear: both; }
+
+.today .context-eps {
+   width: 45%;
+   float: left;
+   display: inline;
+   margin-top: 1em;
+   margin-right: 1em;
+}
+
+
+/* History */
+
+div.timeline { background-color:#D6E7B8; padding:1em; margin:1em 0; }
+
+.timeline-heading { font-family:LPMillerBold, Georgia, Times, serif; font-size:1.3em; color: #000; text-transform:uppercase; }
+
+.history .timeline-entry {
+   background-color: #D6E7B8;
+   color: #000000;
+   font: .9em LPBentonSansRegular, Helvetica, Arial, sans-serif;
+   }
+
+.history .timeline-date {
+   color: #53853C;
+   font-family:LPMillerBold, Georgia, Times, serif;
+   margin:.8em 0 0 0;
+   font-size:1.2em;
+   border-top:2px dotted #53853C;
+   }
+
+.history .timeline-date:first-of-type { margin-top:0; }
+
+
+.understand .box-heading-1-table {
+   border-bottom: 2px dotted #E8181C;
+   border-top: 2px dotted #E8181C;
+   margin: 15px 0 0;
+   padding-top: 5px;
+   font-family: Helvetica, Arial, sans-serif;
+   padding-bottom: 3px;
+   text-transform: uppercase;
+   color: #E42118;
+   font-weight:bold;
+   }
+
+.understand .box-heading-2 {
+   font-family: Helvetica, Arial, sans-serif;
+   color: #E42118;
+   font-weight:bold;
+   margin-bottom:.2em;
+   }
+
+.understand-theme-with-images .image_container:first-of-type { margin-top:0; margin-bottom:1em; }
+
+.understand .context-sidebar-with-heading { float:right; width:145px; margin:10px 0 10px 20px; text-align:center; }
+.understand .sidebar-heading { font: bold 1.3em Georgia, Times, serif; margin: 0; text-transform:none; color:#427421; border:none; text-align:center; }
+.understand .sidebar-list { border-top:2px dotted #8A8D8E; padding-top: .5em; font:italic .9em Helvetica, Arial, sans-serif; text-align:center; }
+.understand .sidebar-list em { display:block; text-align:center; }
+.understand .sidebar-list span { text-align:center; }
+.understand div.sidebar { border-radius:0; page-break-inside: avoid; background:none; margin:20px 0px; border-top:3px solid #D6E7B8; border-bottom:3px solid #D6E7B8; padding:.4em .3em .5em .3em; }
+.understand div.sidebar p { font:.9em Helvetica, Arial, sans-serif; text-align:center; margin-bottom: 0; color:#427421; }
+.sidebar-with-heading + .heading-3 + .context-boxed-text-2-col { clear:none; }
+
+
+
+

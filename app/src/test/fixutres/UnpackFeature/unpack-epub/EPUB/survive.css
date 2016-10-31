@@ -1,0 +1,55 @@
+/* CITY GUIDE */
+/* --------- SURVIVE ----------- */
+
+.survive.section-title-page .context-heading { background-color: #666; border-radius:10px 0 0 10px; padding:1.3em 1em; margin-bottom:2em; }
+.survive.section-title-page .context-heading h1 { margin:0; text-align:right; padding-right:.6em; color:#fff; }
+
+.survive .toc-heading-1 { margin-top:1em; font-family:LPBentonSansCondBold, Arial, sans-serif; font-weight:normal; font-size:1.1em; }
+.survive .toc-heading-1 a {
+   color: #000;
+   -webkit-text-fill-color: #000;
+   font-family: LPBentonSansCondBold,Arial,sans-serif;
+   font-size: 1.1em;
+   font-weight: normal;
+   text-transform: uppercase;
+   }
+
+ .toc-heading-4 { margin:.3em 0 0 1em; font-size: 1em; font-family: Helvetica, Arial, sans-serif; }
+
+.survive .book-section-toc { columns:2; -webkit-columns:2; padding-bottom:5px;}
+.survive .book-section-toc .toc-heading-4 { margin:.5em 0 0 0;  font-weight: normal; font-size:1em; }
+
+.survive .toc-heading-1 { margin-top:1em; border-top:1px dotted #999; padding-top:1em; }
+.survive .toc-heading-1.no-divider { margin-top:0em; border:none; padding-top:0em; }
+
+.survive h2 { margin:1em 0 .2em 0; font-family: Helvetica, Arial sans-serif; text-transform:uppercase; font-size: 1.2em; font-weight:bold;   }
+.survive h3 { border-top: 8px solid #E42118; color: #666; font-size: 1.3em; margin: 1em 0 0.3em; padding-top: 0.3em; }
+.survive h4 { margin:1em 0 0 0; font-family: Helvetica, Arial sans-serif; font-size: 1.1em; }
+.survive h5 { margin:1em 0 .2em 0; font-family: Helvetica, Arial sans-serif; font-size:.9em; text-transform:uppercase; }
+
+.survive .flush-left,
+.survive .body-text { font-family: Helvetica, Arial sans-serif; font-size:.9em; }
+
+.survive .body-text .practicalities,
+.survive .list-a .poi,
+.survive .list-b .poi { font-size:100%; }
+
+.survive p .map-links .link_map { font-size:.75em; }
+
+.survive .box-heading-1-table {
+   border-top:2px dotted #E42118;
+   color:#E42118;
+   font-size:.9em;
+   text-transform:uppercase;
+   padding-top:5px;
+   font-weight:bold;
+   font-family: Helvetica, Arial, sans-serif;
+   margin-top:1em;
+   }
+   .survive table { border-top:2px dotted #E42118; padding-top:.5em; }
+
+.box-heading-1 + table { border-top:none; }
+
+.electrical-plug { float:left; margin-right:1em; }
+
+tr:first-child td { font-family:Helvetica, Arial, sans-serif!important; margin-top:0!important; font-size:.8em; color:#e42118; font-weight:bold; text-transform:uppercase; }

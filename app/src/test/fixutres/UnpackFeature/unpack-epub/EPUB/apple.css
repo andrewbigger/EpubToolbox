@@ -1,0 +1,157 @@
+/* CITY GUIDE */
+/* These styles target Apple and Kindle KF8 devices only, and reverse/overide the ADE styles at the bottom of style.css */
+
+
+span.subtype { float: right; font-size: .7em; margin-left: 0; }
+span.link_map { padding:2px 5px; }
+
+/* Unsupported Script */
+.script.burmese { display: none; }
+.script.ethiopic { display: none; }
+.script.khmer { display: none; }
+
+.script    { display: inline; padding:0; }
+
+.font-icon { display: inline-block; background: none!important; padding: 0; }
+.prac-icon { display: none; }  /* hide the inline image for iPad and KF8 */
+.font-prac-icon { display: inline; }  /* Show embedded font icon for iPad and KF8 */
+
+.top-experiences .list-b { background:none!important; padding: 0;  vertical-align: top; }  /* remove BG image/icon for iPad and KF8 */
+.cross-ref-paragraph .font-icon { display: inline; }
+
+.bullet_arrow { display: inline; }
+
+
+.need-to-know-chapter .list-b,
+.getting-around .list-b,
+.first-time .list-b,
+.explore .list-b  { background:none!important; padding-left: 0; }  /* remove red arrow icon for iPad and KF8 */
+
+
+/* TOP ITINERARIES */
+
+.itinerary-morning { display:inline-block; color:#ed0f69; font-weight:normal; font-size:2.5em; float:left; margin:.1em .2em 0 0; }
+.itinerary-afternoon { display:inline-block; font-style:normal; color:#ffce31; font-weight:normal; font-size:2.3em; float:left; margin:.1em .2em 0em 0; }
+.itinerary-evening { display:inline-block; font-style:normal; color:#005ea8; font-weight:normal; font-size:2em; float:left; margin:.1em .2em 0 0; }
+
+.icon-eating { color:#005ea8; font-size:2.3em; float:left; margin:.1em .2em .1em 0; display: block; }
+.itinerary-eating { display: none; }
+
+.am-pm { display:none; }  /* hide the inline image for iPad and KF8 */
+
+
+/* MONTH BY MONTH */
+
+.month-by-month h6 { background: none; padding-left: 0; }
+
+/* CATEGORY OVERVIEWS */
+
+.cat-overview h1 { padding-left:0!important; background: none!important; /* remove BG image/icon for iPad and KF8 */ }
+.cat-overview h1 .font-icon { font-size: 125%; color:#e42118; vertical-align: middle; display: inline; }  /* Show embedded font icon for iPad and KF8 */
+
+/* NEIGHBOURHOODS AT A GLANCE */
+
+.neighbourhoods-at-a-glance p.numbered-list { background: none; padding-left: 0; }
+.neighbourhoods-at-a-glance .numbered { display: inline; }
+
+/* NEIGHBOURHOODS */
+
+.icon-top-choice .font-prac-icon { color:#005DA6; margin-right:3px; }
+.walking-tour .numbered { display: inline;}
+.list-a .numbered { display: inline; }
+.opening-pages .list-a { background-image: none; padding-left: 0; }
+
+
+.bullet { display:none; }
+
+.blue-numbers-1,
+.blue-numbers-2,
+.blue-numbers-3,
+.blue-numbers-4,
+.blue-numbers-5,
+.blue-numbers-6,
+.blue-numbers-7,
+.blue-numbers-8,
+.blue-numbers-9,
+.blue-numbers-a,
+.blue-numbers-b,
+.blue-numbers-c,
+.black-numbers-1,
+.black-numbers-2,
+.black-numbers-3,
+.black-numbers-4,
+.black-numbers-5 { background: none; margin-right:.2em; margin-left:.2em }
+
+.red-numbers-1,
+.red-numbers-2,
+.red-numbers-3,
+.red-numbers-4,
+.red-numbers-5,
+.red-numbers-6,
+.red-numbers-7,
+.red-numbers-8,
+.red-numbers-9,
+.red-numbers-a,
+.red-numbers-b,
+.red-numbers-c,
+.red-numbers-d,
+.red-numbers-e,
+.red-numbers-f,
+.red-numbers-g,
+.red-numbers-h,
+.red-numbers-i,
+.red-numbers-j,
+.red-numbers-k,
+.red-numbers-l,
+.red-numbers-m,
+.red-numbers-m,
+.red-numbers-o,
+.red-numbers-p { background:none; margin:.2em; }
+
+/* Map Key icons */
+
+.disc-icons {
+	display: inline; /* Show embedded map font icon for iPad and KF8 */
+	font-weight:normal;
+	margin-right:.2em;
+	color:#139CD8;
+	font-size:.9em;
+	}
+.map-keys .map-keys-poi span.ref{ float: right; }
+
+/* Remove BG img and left space for iPad and KF8 */
+p.top-sights,
+p.sights,
+p.sleeping,
+p.eating,
+p.drinking,
+p.drinking-nightlife,
+p.shopping,
+p.entertainment,
+p.activities-courses-tours,
+p.information,
+p.sports-activities,
+p.transport { background:none; text-indent: 0; }
+
+.month-by-month .activities h6,
+.month-by-month .tours h6,
+.month-by-month .beach h6,
+.month-by-month .courses h6,
+.month-by-month .drinking h6,
+.month-by-month .entertainment h6,
+.month-by-month .eating h6,
+.month-by-month .festivals h6,
+.month-by-month .shopping h6,
+.month-by-month .sights h6,
+.month-by-month .sleeping h6,
+.month-by-month .information h6 { background:none; text-indent: 0; padding: 12px 0 0 0; }
+.day-trips .box-list-b { background:none; padding-left:0; }
+
+
+/* Genre <h2> icons */
+.explore-body h2, .genre h2 { padding-left:0; background: none; }
+h2 .font-icon { display:inline; font-size:150%; color: #e42118; float: left; margin:.15em .15em 0em 0; }
+
+/* SLEEPING */
+h1.sleep-head samp.font-icon { display:inline; color: #009FE3;}
+.sleeping h1 { padding-left:0!important; background: none!important; /* remove BG image/icon for iPad and KF8 */ }

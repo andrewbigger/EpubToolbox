@@ -1,0 +1,36 @@
+/*
+ HIDDEN ICONS FOR ADE - CITY GUIDE
+ Please note: This stylesheet is not for all icons, it's only for hidden icons. Whatever is placed
+ in here will be replaced before being output to Mobi because Mobi has a limit on supressed chars
+ using display:none property.
+*/
+.cat-overview h1 .font-icon { display: none; }
+.font-icon-lge { font-style:normal; font-weight:normal; display: none; }  /* Hidden for ADE devices */
+
+.walking-tour .bullet  { display:none; }
+
+.itinerary-morning,
+.itinerary-afternoon,
+.itinerary-evening { display:none; }  /* Hidden for ADE */
+
+.icon-eating { display: none; } /* Hidden for ADE */
+
+.disc-icons { display: none; }
+h1.sleep-head samp.font-icon { display: none; }  /* hide for ADE devices */
+.neighbourhoods-at-a-glance .numbered { font-size:115%; color:#0065B3; padding-right:.2em!important; display: none; }
+
+.list-a .numbered { font-size: 130%; display: none; }
+h2 .font-icon { display: none; /* hide for ADE devices */ }
+
+.script { display: none; }
+.font-icon { font-style:normal; font-weight:normal; display: none; }  /* Hidden for ADE devices */
+
+.font-prac-icon { font-style:normal; font-weight:normal; display: none; }  /* Hidden for ADE devices */
+
+.bullet_arrow {
+   font-weight:normal;
+   margin-right:.2em;
+   color:#E42118;
+   font-size:.7em!important;
+   display: none;  /* hide for ADE devices */
+   }

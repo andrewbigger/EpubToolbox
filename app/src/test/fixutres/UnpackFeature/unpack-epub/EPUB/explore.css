@@ -1,0 +1,377 @@
+/* CITY GUIDE */
+/* --------- GENERIC ----------- */
+
+h1 { font-size:2.5em; }
+h2, .heading-2 { font-size:1.3em; color:#000; margin:1em 0 .3em 0; text-transform:uppercase; font-family:Helvetica, Arial sans-serif; font-weight:bold; }
+h3 { color:#005da8; border-top:6px solid #00aeef; padding-top:.3em; font-size:1.3em; margin:1em 0 .3em 0; }
+h4 { font-size:1.3em; color:#000; margin:1em 0 .3em 0; font-family: LPMillerBold,Georgia,Times,serif; font-weight:normal; }
+h5 { font-family: LPMillerBold,Georgia,Times,serif; color:#005da8; font-size:1.1em; margin:1em 0 0em 0; border-bottom:2px dotted #005da8; padding-bottom:.1em; font-weight:normal;   }
+
+.day-trips .heading-8,
+.explore .heading-8 { font-family: Helvetica, Arial, sans-serif; border-top:2px dotted #00aeef; font-size:1em; padding-top:.8em; margin:1em 0 .2em 0; font-weight:bold;}
+.heading-8 { font-family: Helvetica, Arial, sans-serif; border-top:2px dotted #e42118; font-size:1em; padding-top:.8em; margin:1em 0 .2em 0; font-weight:bold; }
+
+.special-heading-1 { font-family: LPMillerBold,Georgia,Times,serif; font-weight:normal; font-size: 1.8em; margin:1em 0 0em 0; color:#005ea8; }
+.special-heading-2 { font-family: LPMillerBold,Georgia,Times,serif; font-weight:normal; font-size: 1.2em; margin:1em 0 0em 0; color:#005DA8; }
+.special-heading-3 { font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 1em; margin:1em 0 0em 0; color:#222; }
+
+.list-b { background:url(images/arrow-red.gif) no-repeat; }
+
+p.box-heading-1 { color: #e42118; }
+.local-life p.box-heading-2 .numbered { color: #000!important; padding-right:.2em; }
+p.box-heading-2 { font-family: Helvetica, Arial, sans-serif!important; font-weight:bold; font-size: .95em; color:#e42118; }
+
+.running-header {
+   font-family:LPMillerBold, Georgia, Times, serif;
+   font-size:1.1em;
+   color:#005ea8;
+   font-weight:normal;
+   padding-top:.2em;
+   border-top:5px solid #005ea8;
+   margin:0 0 1em 0;
+   }
+
+
+/* --------- NEIGHBOURHOODS AT A GLANCE ----------- */
+
+.neighbourhoods-at-a-glance h6 {
+	border-top: 6px solid #EBE2C7;
+	font-family: LPMillerBold,Georgia,Times,serif;
+	font-size:1.3em;
+	margin-top:1em;
+	padding-top:.6em;
+	background-repeat: no-repeat;
+	background-position: 0 .3em;
+	}
+
+.walking-tour .numbered { color:#E42118; padding-right:.2em!important; }
+
+.bullet { padding-right:2em!important; padding-bottom:.2em; display:flex; }
+
+.blue-numbers-1 { background:url(images/blue-numbers-1.png); background-repeat:no-repeat; }
+.blue-numbers-2 { background:url(images/blue-numbers-2.png); background-repeat:no-repeat; }
+.blue-numbers-3 { background:url(images/blue-numbers-3.png); background-repeat:no-repeat; }
+.blue-numbers-4 { background:url(images/blue-numbers-4.png); background-repeat:no-repeat; }
+.blue-numbers-5 { background:url(images/blue-numbers-5.png); background-repeat:no-repeat; }
+.blue-numbers-6 { background:url(images/blue-numbers-6.png); background-repeat:no-repeat; }
+.blue-numbers-7 { background:url(images/blue-numbers-7.png); background-repeat:no-repeat; }
+.blue-numbers-8 { background:url(images/blue-numbers-8.png); background-repeat:no-repeat; }
+.blue-numbers-9 { background:url(images/blue-numbers-9.png); background-repeat:no-repeat; }
+.blue-numbers-a { background:url(images/blue-numbers-a.png); background-repeat:no-repeat; }
+.blue-numbers-b { background:url(images/blue-numbers-b.png); background-repeat:no-repeat; }
+.blue-numbers-c { background:url(images/blue-numbers-c.png); background-repeat:no-repeat; }
+
+/* --------- NEIGHBOURHOODS ----------- */
+
+/* Neighbourhoods Landing Page  */
+
+.book-section-toc { padding:1em; background:#f9f9f9; border-radius:10px; margin-top:1em; }
+.explore h1.toc-h1 { border-top:5px solid #005ea8; padding-top:7px; font-size:1.7em!important; margin-bottom:.1em; }
+
+.explore .toc-heading-4 { margin-top:.7em; }
+.explore .book-section-toc .toc-heading-4:first-child { margin-top: 0; }
+.explore .toc-heading-4 a { font-size:.8em; text-transform:none!important; font-family:LPBentonSansCond!important; color:#0000FF!important; -webkit-text-fill-color: #0000FF; }
+
+.neighbourhood-landing-page .Icon { font-size:1.1em; width:1.2em; display:inline-block; }
+.neighbourhood-landing-page .map-icon { font-size:1.3em; width:1.1em; display:inline-block; color:#E42118; }
+.neighbourhood-landing-page .Icon.icon-top-sight { color:#009FE3; }
+.neighbourhood-landing-page .Icon.icon-explore { color:#005ea8; }
+.explore-toc + .toc-heading-4 { margin-top:.75em; }
+
+.explore-toc .toc-section-items { padding:.5em 1em 1em 1em; }
+.explore-toc .toc-heading-3 { font-size:1.1em; margin:.6em 0 0 0; }
+.explore-toc .toc-heading-3 a { font-size:.9em; font-family:LPBentonSansCondBold,Arial,sans-serif; color:#222!important; text-transform:uppercase; -webkit-text-fill-color: #000; }
+
+.opening-pages .list-a { background-repeat: no-repeat; margin-bottom:.2em; padding-bottom:.2em; }
+
+.black-numbers-1 { background:url(images/black-numbers-1.png); background-repeat:no-repeat; }
+.black-numbers-2 { background:url(images/black-numbers-2.png); background-repeat:no-repeat; }
+.black-numbers-3 { background:url(images/black-numbers-3.png); background-repeat:no-repeat; }
+.black-numbers-4 { background:url(images/black-numbers-4.png); background-repeat:no-repeat; }
+.black-numbers-5 { background:url(images/black-numbers-5.png); background-repeat:no-repeat; }
+
+
+.genre-heading-1 {
+   font-family: Helvetica, Arial, sans-serif;
+   color:#000;
+   font-size:1.2em;
+   margin-top:1em;
+   font-weight:bold;
+   }
+
+.genre-heading-2 {
+   font-family: Helvetica, Arial, sans-serif;
+   color:#000;
+   font-size:1em;
+   margin-top:1em;
+   font-weight:bold;
+   }
+
+.poi { margin-top: 1em; }
+
+.box span.name,
+.boxed-text span.name,
+.dont-miss span.name,
+.box-practical-tip span.name,
+.practical-tip span.name,
+.two-column-practical-tip span.name,
+.off-the-beaten-track span.name,
+.worth-a-trip span.name,
+.local-knowledge span.name,
+.dont-miss span.name {
+    color: #E42118;
+    font-size: 1em;
+    }
+
+.poi-line .name {
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: bold;
+   color: #009fe3;
+   text-transform:uppercase;
+   font-size: 100%;
+   }
+
+.icon-topchoice { margin-right:.2em; margin-top: -.1em; float:left; }
+
+.review .body-text { margin-bottom: .2em; }
+.review .body-text:first-child { text-indent: 0; }
+
+.poi-line-sub-heading {
+   font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: .9em;
+	color: #009fe3;
+   }
+
+span.practicalities {
+   font-size: .9em;
+   font-family:LPBentonSansCond, Helvetica, Arial, sans-serif;
+   color:#333;
+   font-weight:normal;
+   }
+
+.box-list-a span.practicalities { font-size: 1em; }
+.stats { font-family:LPBentonSansCond, Helvetica, Arial, sans-serif; text-transform:uppercase; color:#333; font-size: .8em; }
+.price-indicator { font-weight:bold; color:#333; padding-left:2em; }
+.info-body-text { text-indent:1em; }
+.info-list-a { margin-top:.5em; }
+
+.info-heading-1 { font-family: Helvetica, Arial, sans-serif; color:#6d6f71; font-weight: bold; margin-top:1em; font-size: 1em; margin-bottom:.2em; }
+.info-heading-2 { color: #009FE3; font-family: Helvetica,Arial, sans-serif; font-size: .9em; font-weight: bold; margin-top: 1em; text-transform:uppercase; }
+.info-heading-3 { color: #6D6F71; font-family: Helvetica,Arial, sans-serif; font-size: .9em; font-weight: bold; margin-top: 1em; }
+
+.info-poi { color: #009FE3; font-family: Helvetica,Arial, sans-serif; font-size: 0.9em; font-weight:bold; }
+.info-emphasis { font-weight: bold; }
+.section-explore .emphasis-character { font-family: Helvetica, Arial, sans-serif; }
+.section-explore .flush-left .emphasis-character,
+.section-explore .body-text .emphasis-character { font-size:.9em; }
+
+
+/* Boxed text */
+.chapter-opening-sidebar p { font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif; font-size: .9em; }
+.chapter-opening-sidebar h4  { font-family: LPMillerBold,Georgia,Times,serif; font-weight:normal; font-size: 1.4em; margin:1em 0 .2em 0; }
+.chapter-opening-sidebar h4:first-of-type { margin-top:0; }
+.chapter-opening-sidebar .cross-ref-paragraph { font-family:Helvetica, Arial, sans-serif; font-style:normal; margin-top:.6em; }
+.icon-b { color:#e42118; font-size:.8em; }
+
+.icon-heading-4 {
+   font-family: LPMillerBold,Georgia,Times,serif!important;
+   font-weight:normal;
+   font-size: 1.4em!important;
+   margin:1em 0 .2em 0;
+   }
+
+ .practical-tip h3 {
+   border-bottom: 3px dotted #E42118;
+   border-top: none;
+   color: #E42118;
+   font-family: LPBentonSansBold,Helvetica,Arial, sans-serif!important;
+   font-size: .9em;
+   text-transform:uppercase;
+   font-weight: normal;
+   margin:0 0 .6em 0;
+   padding-bottom:.3em;
+   }
+
+/* Top Sights */
+
+.top-sights em { font-style:normal; font-weight:bold; font-family:Helvetica, Arial, sans-serif; }
+
+
+/* Blue Top Sights box */
+
+.context-top-sights-special-heading {
+   background-color: #169DEB;
+   border-radius: 10px;
+   color: #fff;
+   font-family: Helvetica, Arial, sans-serif;
+   text-transform: uppercase;
+   line-height: normal;
+   margin-bottom: 15px;
+   margin-top: 1px;
+   padding: 8px 8px 5px 8px;
+   }
+
+ .section-top-sights-page-images .context-top-sights-special-heading { border-radius: 0 0 10px 10px; }
+
+.heading-2 + .context-top-sights-special-heading { margin-top:1em; }
+
+p.flush-left + .context-top-sights-special-heading { margin-top:1em; }
+
+h5.top-sights {
+   display: block;
+   font-size: 1em;
+   font-weight: normal;
+   margin: 0 0 -2px 68px;
+   padding: 0;
+   font-family:Helvetica, Arial, sans-serif!important;
+   line-height:normal;
+   border: none;
+   color:#fff;
+   }
+
+.section-top-sights-page-images .image_container:first-of-type { margin-top:0; margin-bottom:1px; }
+.section-top-sights-page-images .image_container .caption { margin-bottom:0; }
+
+p.special-heading-1-white,
+.context-top-sights-special-heading .special-heading-1 {
+   display: block;
+   padding: 0;
+   margin: 0 0 .2em 0;
+   font-weight: bold;
+   font-size: 1em;
+   margin-left: 68px;
+   font-family: Helvetica, Arial sans-serif!important;
+   line-height:100%;
+   color:#fff;
+   }
+
+.context-top-sights-special-heading img { float: left; margin: 0px 5px 5px 7px; }
+
+/* Boxed text version of Top Sights */
+
+.context-top-sights-2-col-box {  background-color: #eee8d7; border-radius: 10px; margin:-13px 0 1em 0; padding: 1em; }
+.context-top-sights-2-col-box p { font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif!important; font-size: .9em; }
+
+.context-top-sights-sidebar { margin-top:1em; }
+
+p + .context-top-sights-special-heading { margin-top:1em; }
+
+
+ /* Sidebar */
+
+div.sidebar .first p.box-heading-1 { border: none; }
+div.sidebar .first { border-bottom: 3px dotted #E8181C; padding-bottom:15px; margin-top:0px; }
+
+div.sidebar { background:none; margin:15px 3% 15px 15px; }
+div.sidebar .box-heading-1:first-child { margin-top:0; }
+
+div.sidebar div { margin-top:15px; }
+
+/* Genre <h2> icons */
+
+.explore-body h2, .genre h2 { margin-bottom:.5em; padding:.1em 0 .2em 35px; }
+
+h2.sights { background:url(images/category-sights.gif) no-repeat 0 -.2em; }
+h2.sleeping { background:url(images/category-sleep.gif) no-repeat 0 -.3em; }
+h2.eating { background:url(images/category-eat.gif) no-repeat 0 0em; }
+h2.drinking,
+h2.eating-drinking,
+h2.drinking-nightlife { background:url(images/category-drink.gif) no-repeat 0 0em; }
+h2.shopping { background:url(images/category-shop.gif) no-repeat 0 0em; }
+h2.entertainment { background:url(images/category-entertain.gif) no-repeat 0 0em; }
+h2.sports-activities { background:url(images/category-activities.gif) no-repeat 0 -.2em;  }
+
+
+/* Walking / Museum Tour */
+
+.walking-tour,
+.top-sights-museum-tour,
+.local-life { background-color: #eee8d7; padding:1em; border-top:8px solid #E42118; padding-top:.8em; margin:0px 0 15px 0; }
+
+.walking-tour .numbers { color:#E42118; padding-right:0!important; }
+
+.walking-tour-stats { font-family: Helvetica, Arial sans-serif; text-transform:uppercase; font-size:.9em; }
+.walking-tour-stats strong { text-transform:uppercase; }
+.walking-tour-stats + .flush-left { margin-top:1em; }
+
+.walking-tour .box-flush-left,
+.walking-tour .box-body-text,
+.walking-tour .body-text,
+.walking-tour .flush-left,
+.top-sights-museum-tour .box-flush-left,
+.top-sights-museum-tour .box-body-text { font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif; font-size: .9em; }
+
+.walking-tour-map { text-align:center; }
+.walking-tour-map img { vertical-align:bottom; }
+
+.walking-tour h2,
+.top-sights-museum-tour h2:first-of-type,
+.local-life-tour h2:first-of-type,
+.heading-tour { font-family: Helvetica, Arial, sans-serif; font-size:1.2em; margin:0 0 0em 0; line-height:normal; text-transform:none; padding-left:0; }
+
+.walking-tour h3, span.sub-head { font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size:1em; color:#005ea8; border:none; padding:0; margin:0 0 .6em 0; }
+
+.walking-tour .sidebar {
+   border-bottom:2px dotted #e42118;
+   border-top:2px dotted #e42118;
+   color:#e42118;
+   margin:1em 0;
+   font-size:.9em;
+   padding:.5em 0;
+   }
+
+.walking-tour h4 samp,
+.top-sights-museum-tour h4 samp,
+.heading-4-walking-tour samp  { float:left; font-size:1.7em; margin-top:.2em; }
+
+.floorplan { margin:10px 0; }
+
+/* Day Trips */
+
+.day-trips-body .list-b strong { font-family:Helvetica, Arial sans-serif; font-size:.95em; }
+
+/* Sleeping */
+
+.sleeping h1 {
+   background:url(images/category-sleeping-lge.gif) no-repeat 0 0;
+   font-family: Helvetica,Arial,sans-serif;
+   font-size:2.5em;
+   font-weight:bold;
+   padding:5px 0 10px 70px;
+   }
+
+.sleeping-1st .introduction-flush-left { color:#009FE3; font-style:italic; font-family:Georgia, Times, serif; }
+
+.sleeping-box { border:4px solid #00adef; background: none; border-radius:20px; padding:1em; margin:1em 0; page-break-inside: avoid; }
+.sleeping-box p { font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif!important; font-size: .9em; }
+.sleeping-box .box-heading-1 { color:#000; border-bottom:3px dotted #00ADEF; font-family:Helvetica, Arial, sans-serif!important; }
+.sleeping-box .name { font-family: Helvetica,Arial,sans-serif;  font-weight:bold; }
+.sleeping-box .box-body-text { text-indent: 0; }
+
+.sleeping h5 {
+   color:#009FE3;
+   font-family: LPMillerBold, Georgia,Times,serif;
+   border-bottom:3px dotted #009FE3;
+   padding-bottom:.1em;
+   margin:.8em 0 .6em 0;
+   font-size:1.2em;
+   font-weight:normal;
+   }
+
+.sleeping td .emphasis-character,
+.sleeping td strong { color:#00b9f1; font-family: LPBentonSansCondBold,Arial,sans-serif,Helvetica,Arial,sans-serif; font-weight:normal; text-transform:uppercase; }
+.sleeping tr:first-child td { background:#c7eafb; }
+.sleeping tr td { background:#eff9fe; font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif!important; font-size:.9em; }
+
+.sleeping th { background:#c7eafb; }
+.sleeping th .table-heading { font-size:1em; padding:.1em .3em; }
+.sleeping td .table-heading { font-size:.9em; }
+
+
+.best-lists td { font-family:LPBentonSansRegular, Helvetica, Arial, sans-serif!important; font-size: .8em; margin:0 }
+.best-lists h3 { color:#006991; }
+
+.best-lists .context-sleeping-box-1-col .box-list-a,
+.best-lists .context-sleeping-box-2-col .box-list-a { font-size:.9em; }
+
