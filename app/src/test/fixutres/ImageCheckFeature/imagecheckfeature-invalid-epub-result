@@ -1,0 +1,7 @@
+Outputs
+	Image Size Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestFailBook.epub
+		Image Size Check Results
+			Validating image size.
+			ERROR: large-image.png: File is 6.0 megapixels in size. It should be less than 4.2mpx. Please reduce the size of this image.
+		Image Size Checker completed with errors.
