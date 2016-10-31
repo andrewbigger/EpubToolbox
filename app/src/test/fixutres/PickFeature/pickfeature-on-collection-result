@@ -1,0 +1,5 @@
+Outputs
+	Pick ePubs from Folder
+		Copied target-book-1.epub to /Users/dev/projects/ebooks-toolbox/src/test/fixtures/PickFeature/TestCollection
+		Copied target-book-2.epub to /Users/dev/projects/ebooks-toolbox/src/test/fixtures/PickFeature/TestCollection
+		Pick ePubs from Folder completed successfully.
