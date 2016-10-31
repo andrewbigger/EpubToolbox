@@ -1,0 +1,12 @@
+Outputs
+	Epub Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestFailBook.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
+ERROR(RSC-001): TestFailBook.epub/TestFailBook.epub(-1,-1): File 'GoogleDoc/Missing.xhtml' could not be found.
+WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item '.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
+WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'GoogleDoc/.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
+WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'GoogleDoc/images/.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
+WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'iTunesMetadata.plist' exists in the EPUB, but is not declared in the OPF manifest.
+
+		Epub Checker completed with errors.
