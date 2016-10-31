@@ -3,6 +3,8 @@ package com.biggerconcept.epubtoolbox.services;
 import com.biggerconcept.epubtoolbox.actions.Action;
 import com.biggerconcept.epubtoolbox.actions._IAction;
 import java.io.File;
+import java.lang.reflect.Field;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.mock;
@@ -42,6 +44,25 @@ public class ToolboxServiceTest {
             // say nothing
         }
         
+    }
+    
+    @Test
+    public void testGetLastAction() {
+        System.out.println("#getLastAction returns last executed action");
+        instance.setLastAction(task);
+        assertEquals(task, instance.getLastAction());
+    }
+
+    @Test
+    public void testSetLastAction()
+            throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
+        System.out.println("#setLastAction allows lastAction to be set");
+
+        instance.setLastAction(task);
+        Field lastAction = ToolboxService.class.getDeclaredField("lastAction");
+        lastAction.setAccessible(true);
+
+        assertEquals(task, (Action) lastAction.get(instance));
     }
     
     @Test

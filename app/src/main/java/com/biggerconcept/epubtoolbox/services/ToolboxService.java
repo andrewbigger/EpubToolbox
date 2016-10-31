@@ -12,8 +12,17 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class ToolboxService {
+    private Action lastAction;
     public void performAction(Action task) throws Exception {
         task.doAction();
+    }
+    
+    public Action getLastAction() {
+        return lastAction;
+    }
+    
+    public void setLastAction(Action action) {
+        lastAction = action;
     }
     
     public File chooseDirectory(String prompt, Stage toolboxStage) 
