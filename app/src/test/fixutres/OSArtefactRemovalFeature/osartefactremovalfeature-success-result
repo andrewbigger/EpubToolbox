@@ -1,0 +1,20 @@
+Outputs
+	Epub Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
+WARNING(OPF-003): TestBookWithOSArtefacts.epub/TestBookWithOSArtefacts.epub(-1,-1): Item '.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
+WARNING(OPF-003): TestBookWithOSArtefacts.epub/TestBookWithOSArtefacts.epub(-1,-1): Item 'GoogleDoc/.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
+
+		Epub Checker completed with errors.
+	OS Artefact Removal Utility
+		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Adjusting TestBookWithOSArtefacts.epub
+			OS Artefacts have been removed.
+		OS Artefact Removal Utility completed successfully.
+	Epub Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
+
+		Epub Checker completed successfully.
