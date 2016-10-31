@@ -1,0 +1,4 @@
+Outputs
+	All checks failed because: Probably not a zip file or a corrupted zip file
+		net.lingala.zip4j.exception.ZipException: Probably not a zip file or a corrupted zip file
+		All checks failed because: Probably not a zip file or a corrupted zip file completed with errors.

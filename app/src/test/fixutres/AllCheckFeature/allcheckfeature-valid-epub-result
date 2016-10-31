@@ -1,0 +1,12 @@
+Outputs
+	All Checks
+		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestPassBook.epub
+		Checking TestPassBook.epub
+			Epub Check Results
+				Validating using EPUB version 3.0.1 rules.
+
+			File Size Check Results
+				Validating html file size.
+			Image Size Check Results
+				Validating image size.
+		All Checks completed successfully.
