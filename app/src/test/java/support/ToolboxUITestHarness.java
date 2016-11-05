@@ -2,9 +2,11 @@ package support;
 
 import com.biggerconcept.epubtoolbox.ToolboxController;
 import com.biggerconcept.epubtoolbox.exceptions.NoChoiceMadeException;
-import com.biggerconcept.epubtoolbox.services.*;
+import com.biggerconcept.epubtoolbox.services.ToolboxService;
+import com.biggerconcept.epubtoolbox.services.ConsoleService;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,6 +23,7 @@ import static org.mockito.Mockito.doThrow;
 import org.testfx.framework.junit.ApplicationTest;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.testfx.api.FxAssert.verifyThat;
 import org.testfx.matcher.base.NodeMatchers;
 
@@ -239,6 +242,16 @@ public class ToolboxUITestHarness extends ApplicationTest {
         
         verify(consoleSpy, Mockito.times(1))
                 .out(Matchers.anyObject(), Matchers.startsWith(expectedMessage));
+    }
+    
+    protected void toolboxCollectionModeShouldBeFalse() {
+        System.out.println(" = Sets isCollectionMode flag to false");
+        assertFalse(ctrl.isCollectionMode());
+    }
+    
+    protected void toolboxCollectionModeShouldBeTrue() {
+        System.out.println(" = Sets isCollectionMode flag to true");
+        assertTrue(ctrl.isCollectionMode());
     }
     
     protected void toolboxActionShouldBeSuccessful() {
