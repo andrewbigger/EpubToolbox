@@ -3,6 +3,7 @@ package com.biggerconcept.epubtoolbox.services;
 import com.biggerconcept.epubtoolbox.actions.Action;
 import com.biggerconcept.epubtoolbox.exceptions.NoChoiceMadeException;
 import java.io.File;
+import java.util.ArrayList;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
@@ -12,10 +13,9 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class ToolboxService {
+    private boolean rec = false;
+    private final ArrayList recording = new ArrayList<>();
     private Action lastAction;
-    public void performAction(Action task) throws Exception {
-        task.doAction();
-    }
     
     public Action getLastAction() {
         return lastAction;
@@ -23,6 +23,40 @@ public class ToolboxService {
     
     public void setLastAction(Action action) {
         lastAction = action;
+    }
+    
+    public boolean hasLastAction() {
+        return lastAction != null;
+    }
+    
+    public ArrayList<Action> getRecording() {
+        return recording;
+    }
+    
+    public void addToRecording(Action action) {
+        recording.add(action);
+    }
+    
+    public void clearRecording() {
+        recording.clear();
+    }
+    
+    public boolean hasRecording() {
+        return !recording.isEmpty();
+    }
+    
+    public boolean isRecording()      { 
+        return rec; 
+    }
+    
+    public void setRecordingStatus(boolean state) {
+        rec = state;
+    }
+    
+    public void performAction(Action task) throws Exception {
+        task.doAction();
+        setLastAction(task);
+        if (isRecording() == true) { addToRecording(task); }
     }
     
     public File chooseDirectory(String prompt, Stage toolboxStage) 

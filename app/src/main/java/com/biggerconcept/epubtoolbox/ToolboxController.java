@@ -3,6 +3,7 @@ package com.biggerconcept.epubtoolbox;
 import com.biggerconcept.epubtoolbox.exceptions.NoChoiceMadeException;
 import com.biggerconcept.epubtoolbox.services.*;
 import com.biggerconcept.epubtoolbox.actions.*;
+import com.biggerconcept.epubtoolbox.results.Message;
 import com.biggerconcept.epubtoolbox.utilities.PickUtility;
 import java.io.File;
 import java.net.URL;
@@ -11,9 +12,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.apache.commons.io.FileUtils;
 
 public class ToolboxController implements Initializable {
     public ToolboxService toolbox;
@@ -46,6 +50,22 @@ public class ToolboxController implements Initializable {
     
     @FXML
     public TreeView<String> consoleView;
+    
+    @FXML
+    private CheckBox runOnCollectionChoice;
+
+    @FXML
+    private Button recordButton;
+
+    @FXML
+    private Button playButton;
+
+    @FXML
+    private Button stopButton;
+
+    public boolean isCollectionMode() {
+        return runOnCollectionChoice.isSelected();
+    }
     
     @FXML
     private void handleUnpackClick(MouseEvent event) {
@@ -290,8 +310,86 @@ public class ToolboxController implements Initializable {
             console.err("Itunes metadata removal", e);
         }
     }
+    
+    @FXML
+    private void handleRecordClick(MouseEvent event) {
+        console.out(new Message("info", ">> Start Recording"));
 
-    private boolean isCollectionMode() {
-        return false;
+        toolbox.clearRecording();
+        toolbox.setRecordingStatus(true);
+
+        this.recordButton.setDisable(true);
+        this.stopButton.setDisable(false);
+        this.playButton.setDisable(true);
     }
+
+    @FXML
+    private void handleStopClick(MouseEvent event) {
+        console.out(new Message("info", ">> Stop Recording"));
+
+        toolbox.setRecordingStatus(false);
+
+        this.recordButton.setDisable(false);
+        this.stopButton.setDisable(true);
+
+        if (toolbox.hasRecording()) { this.playButton.setDisable(false); }
+    }
+
+    @FXML
+    private void handlePlayClick(MouseEvent event) {
+        if (!toolbox.hasRecording()) { return; }
+
+        try {
+            console.out(new Message("info", ">> Replay Action"));
+            for (Action action : toolbox.getRecording()) {
+                action.resetResult();
+                
+                toolbox.performAction(action);
+                console.out(action.getResult(), action.getTask());
+            }
+            console.out(new Message("info", ">> End Replay"));
+        }
+        catch (Exception e) {
+            console.err("Action replay", e);
+        }
+    }
+
+    @FXML
+    private void handleRepeatClick(MouseEvent event) {
+        if (!toolbox.hasLastAction()) { return; }
+
+        try {
+            console.out(new Message("info", ">> Repeat Action"));
+            Action lastAction = toolbox.getLastAction();
+            lastAction.resetResult();
+            
+            toolbox.performAction(lastAction);
+            console.out(lastAction.getResult(), lastAction.getTask());
+            console.out(new Message("info", ">> End Repeat"));
+        }
+        catch (Exception e) {
+            console.err("Action repeat", e);
+        }
+    }
+
+    @FXML
+    private void handleClearClick(MouseEvent event) {
+        console.clear();
+    }
+
+    @FXML
+    private void handleExportClick(MouseEvent event) {
+        try {
+            File outFile = toolbox.chooseSaveFile(
+                    "Choose console export location", toolboxStage());
+            FileUtils.write(outFile, console.toString());
+            console.out(new Message("info", ">> Export complete"));
+       }
+        catch (NoChoiceMadeException ncm) {
+            // Do nothing
+        }
+        catch (Exception e) {
+            console.err("Console export", e);
+        }
+   }
 }

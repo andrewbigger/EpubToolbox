@@ -9,6 +9,23 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="859.0" stylesheets="@Toolbox.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biggerconcept.epubtoolbox.ToolboxController">
    <top>
       <BorderPane prefHeight="44.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button id="recordButton" fx:id="recordButton" mnemonicParsing="false" onMouseClicked="#handleRecordClick" text="Record" />
+                  <Button id="stopButton" fx:id="stopButton" disable="true" mnemonicParsing="false" onMouseClicked="#handleStopClick" text="Stop" />
+                  <Button id="playButton" fx:id="playButton" disable="true" mnemonicParsing="false" onMouseClicked="#handlePlayClick" text="Play" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <Button id="repeatButton" fx:id="repeatButton" mnemonicParsing="false" onMouseClicked="#handleRepeatClick" text="Repeat" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <Button id="clearConsoleButton" fx:id="clearConsoleButton" mnemonicParsing="false" onMouseClicked="#handleClearClick" text="Clear Console" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <CheckBox id="runOnCollectionChoice" fx:id="runOnCollectionChoice" mnemonicParsing="false" text="Run on Collection?" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+                  <Button id="exportLogButton" fx:id="exportLogButton" mnemonicParsing="false" onMouseClicked="#handleExportClick" text="Export Log" />
+              </items>
+            </ToolBar>
+         </bottom>
          <center>
             <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
