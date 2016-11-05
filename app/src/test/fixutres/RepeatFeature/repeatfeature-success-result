@@ -1,0 +1,13 @@
+Outputs
+	File Size Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestPassBook.epub
+		File Size Check Results
+			Validating html file size.
+		File Size Checker completed successfully.
+	>> Repeat Action
+	File Size Checker
+		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestPassBook.epub
+		File Size Check Results
+			Validating html file size.
+		File Size Checker completed successfully.
+	>> End Repeat
