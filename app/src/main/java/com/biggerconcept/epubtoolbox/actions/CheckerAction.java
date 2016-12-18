@@ -2,7 +2,6 @@ package com.biggerconcept.epubtoolbox.actions;
 
 import com.biggerconcept.epubtoolbox.checkers.Checker;
 import java.io.File;
-import org.apache.commons.io.FileUtils;
 
 public class CheckerAction extends Action implements _IAction {
     

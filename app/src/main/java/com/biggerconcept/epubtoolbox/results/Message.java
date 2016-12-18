@@ -40,4 +40,3 @@ public class Message implements _IMessage {
         return info;
     }
 }
-

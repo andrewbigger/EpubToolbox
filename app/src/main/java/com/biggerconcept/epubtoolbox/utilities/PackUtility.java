@@ -1,6 +1,5 @@
 package com.biggerconcept.epubtoolbox.utilities;
 
-import com.biggerconcept.epubtoolbox.utilities.Utility;
 import java.io.File;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.model.ZipParameters;
@@ -47,4 +46,3 @@ public class PackUtility extends Utility {
     }
     
 }
-

@@ -52,4 +52,3 @@ public class OSArtefactRemovalUtility extends Utility {
     }
     
 }
-

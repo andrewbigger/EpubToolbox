@@ -23,4 +23,5 @@ public class TestHelper {
     public static void clearTarget() throws IOException {
         FileUtils.deleteDirectory(TEST_TARGET_DIR);
     }
+    
 }
