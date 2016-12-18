@@ -1,6 +1,6 @@
 Outputs
 	Image Size Checker
-		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestPassBook.epub
+		ePub: /Users/dev/projects/EpubToolbox/app/src/test/fixtures/Common/TestPassBook.epub
 		Image Size Check Results
 			Validating image size.
 		Image Size Checker completed successfully.

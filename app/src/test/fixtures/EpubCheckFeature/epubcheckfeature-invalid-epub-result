@@ -1,19 +1,12 @@
 Outputs
-	All Checks
-		ePub: /Users/dev/projects/ebooks-toolbox/src/test/fixtures/Common/TestFailBook.epub
-		Checking TestFailBook.epub
-			Epub Check Results
-				Validating using EPUB version 3.0.1 rules.
+	Epub Checker
+		ePub: /Users/dev/projects/EpubToolbox/app/src/test/fixtures/Common/TestFailBook.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
 ERROR(RSC-001): TestFailBook.epub/TestFailBook.epub(-1,-1): File 'GoogleDoc/Missing.xhtml' could not be found.
 WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item '.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
 WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'GoogleDoc/.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
 WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'GoogleDoc/images/.DS_Store' exists in the EPUB, but is not declared in the OPF manifest.
 WARNING(OPF-003): TestFailBook.epub/TestFailBook.epub(-1,-1): Item 'iTunesMetadata.plist' exists in the EPUB, but is not declared in the OPF manifest.
 
-			File Size Check Results
-				Validating html file size.
-				ERROR: TestBook.xhtml: File is 462kb in size. Please reduce the size to less than 300kb.
-			Image Size Check Results
-				Validating image size.
-				ERROR: large-image.png: File is 6.0 megapixels in size. It should be less than 4.2mpx. Please reduce the size of this image.
-		All Checks completed with errors.
+		Epub Checker completed with errors.

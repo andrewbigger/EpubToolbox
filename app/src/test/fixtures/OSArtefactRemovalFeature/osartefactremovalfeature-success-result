@@ -1,0 +1,18 @@
+Outputs
+	Epub Checker
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
+
+		Epub Checker completed successfully.
+	OS Artefact Removal Utility
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Adjusting TestBookWithOSArtefacts.epub
+			OS Artefacts have been removed.
+		OS Artefact Removal Utility completed successfully.
+	Epub Checker
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/OSArtefactRemovalFeature/TestBookWithOSArtefacts.epub
+		Epub Check Results
+			Validating using EPUB version 3.0.1 rules.
+
+		Epub Checker completed successfully.

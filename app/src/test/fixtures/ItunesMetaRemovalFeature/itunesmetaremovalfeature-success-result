@@ -1,18 +1,18 @@
 Outputs
 	Epub Checker
-		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
 		Epub Check Results
 			Validating using EPUB version 3.0.1 rules.
 WARNING(OPF-003): TestBookWithItunesMeta.epub/TestBookWithItunesMeta.epub(-1,-1): Item 'iTunesMetadata.plist' exists in the EPUB, but is not declared in the OPF manifest.
 
 		Epub Checker completed with errors.
 	Itunes Meta Removal Utility
-		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
 		Adjusting TestBookWithItunesMeta.epub
 			iTunesMetadata.plist has been removed.
 		Itunes Meta Removal Utility completed successfully.
 	Epub Checker
-		ePub: /Users/dev/projects/ebooks-toolbox/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
+		ePub: /Users/dev/projects/EpubToolbox/app/target/test-output/ItunesMetaRemovalFeature/TestBookWithItunesMeta.epub
 		Epub Check Results
 			Validating using EPUB version 3.0.1 rules.
 
