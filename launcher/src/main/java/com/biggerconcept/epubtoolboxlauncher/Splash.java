@@ -17,7 +17,7 @@ public class Splash implements UIProvider {
     public static final String LOAD_STATUS = "Firing Up...";
     public static final String UPDATE_STATUS = "Updating, please wait...";
     public static final String FOOTER_TEXT = 
-            "© 2016 Bigger Concept. All Rights Reserved.";
+            "Bigger Concept";
             
     private Stage stage;
     private ProgressBar updateProgress;
