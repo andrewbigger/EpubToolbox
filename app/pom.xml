@@ -200,6 +200,7 @@
                                 <argument>${app.vendor}</argument>
                                 <argument>-BappVersion=${version}</argument>
                                 <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
+                                <argument>-Bicon=${project.basedir}/target/classes/icons/Toolbox.icns</argument>
                             </arguments>
                         </configuration>
                     </execution>
