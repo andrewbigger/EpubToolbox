@@ -9,31 +9,162 @@
 
     <name>EpubToolbox</name>
 
+    <organization><name>Bigger Concept</name></organization>
+
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <app.filename>EpubToolbox</app.filename>
-        <app.mainClass>com.biggerconcept.epubtoolbox.MainApp</app.mainClass>
-        <app.cacheDir>USERLIB/com.biggerconcept.epubtoolbox</app.cacheDir>
+        <app.filename>${project.name}</app.filename>
+        <app.package>com.biggerconcept.${project.artifactId}</app.package>
+        <app.mainClass>${app.package}.MainApp</app.mainClass>
+
+        <app.cacheDir>USERLIB/${app.package}</app.cacheDir>
         <app.vendor>Bigger Concept</app.vendor>
-        <app.url>http://apps.biggerconcept.com/epubtoolbox/release/</app.url>
+
+        <app.url>http://apps.biggerconcept.com/${project.artifactId}</app.url>
+
+        <app.deploy_bucket>s3://apps.biggerconcept.com</app.deploy_bucket>
+
+        <app.acceptDowngrade>false</app.acceptDowngrade>
+
         <app.dir>${project.build.directory}/dist/app</app.dir>
         <app.installerdir>${project.build.directory}/dist/installer</app.installerdir>
-        <app.acceptDowngrade>false</app.acceptDowngrade>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <organization>
-        <name>Bigger Concept</name>
-    </organization>
-    
+    <profiles>
+        <profile>
+            <id>alpha-release</id>
+            <activation>
+                <property>
+                  <name>channel</name>
+                  <value>alpha</value>
+                </property>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <app.channel>alpha</app.channel>
+                <app.mvn_bucket>s3://mvn.biggerconcept.com/${app.channel}</app.mvn_bucket>
+                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
+                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
+                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>beta-release</id>
+            <activation>
+                <property>
+                  <name>channel</name>
+                  <value>beta</value>
+                </property>
+            </activation>
+            <properties>
+                <app.channel>beta</app.channel>
+                <app.mvn_bucket>s3://mvn.biggerconcept.com/unstable</app.mvn_bucket>
+                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
+                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
+                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                  <name>channel</name>
+                  <value>stable</value>
+                </property>
+            </activation>
+            <properties>
+                <app.channel>stable</app.channel>
+                <app.mvn_bucket>s3://mvn.biggerconcept.com</app.mvn_bucket>
+                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
+                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
+                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>mac-binary</id>
+            <activation>
+                <property>
+                    <name>mac-bin</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>installer</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>javapackager</executable>
+                                    <arguments>
+                                        <argument>-deploy</argument>
+                                        <argument>-native</argument>
+                                        <argument>-outdir</argument>
+                                        <argument>${app.installerdir}</argument>
+                                        <argument>-outfile</argument>
+                                        <argument>${app.filename}</argument>
+                                        <argument>-srcdir</argument>
+                                        <argument>${app.dir}</argument>
+                                        <argument>-srcfiles</argument>
+                                        <argument>fxlauncher.jar</argument>
+                                        <argument>-appclass</argument>
+                                        <argument>fxlauncher.Launcher</argument>
+                                        <argument>-name</argument>
+                                        <argument>${project.name}</argument>
+                                        <argument>-title</argument>
+                                        <argument>${project.name}</argument>
+                                        <argument>-vendor</argument>
+                                        <argument>${app.vendor}</argument>
+                                        <argument>-BappVersion=${version}</argument>
+                                        <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
+                                        <argument>-Bicon=${app.mac_icon}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>wagon-maven-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                            <execution>
+                                <id>deploy-bin</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>upload</goal>
+                                </goals>
+                                <configuration>
+                                    <serverId>bcp-apps</serverId>
+                                    <url>s3://apps.biggerconcept.com/epubtoolbox/</url>
+                                    <fromDir>${project.build.directory}/dist/installer/bundles</fromDir>
+                                    <includes>*.dmg</includes>
+                                    <toDir>${app.channel}</toDir>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <distributionManagement>
         <site>
             <id>bcp-apps</id>
-            <url>s3://apps.biggerconcept.com/</url>
+            <url>${app.deploy_bucket}</url>
         </site>
         <repository>
             <id>bcp-mvn-repo</id>
-            <url>s3://mvn.biggerconcept.com/</url>
+            <url>${app.mvn_bucket}</url>
         </repository>
     </distributionManagement>
 
@@ -46,7 +177,7 @@
                 <configuration>
                     <outputDirectory>${app.dir}</outputDirectory>
                 </configuration>
-            </plugin>   
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -87,7 +218,6 @@
                 <executions>
                     <execution>
                         <id>unpack-dependencies</id>
-
                         <phase>package</phase>
                         <goals>
                             <goal>exec</goal>
@@ -127,7 +257,7 @@
                         <configuration>
                             <mainClass>fxlauncher.CreateManifest</mainClass>
                             <arguments>
-                                <argument>${app.url}</argument>
+                                <argument>${app.release_url}</argument>
                                 <argument>${app.mainClass}</argument>
                                 <argument>${app.dir}</argument>
                                 <argument>--cache-dir=${app.cacheDir}</argument>
@@ -171,39 +301,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>installer</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>javapackager</executable>
-                            <arguments>
-                                <argument>-deploy</argument>
-                                <argument>-native</argument>
-                                <argument>-outdir</argument>
-                                <argument>${app.installerdir}</argument>
-                                <argument>-outfile</argument>
-                                <argument>${app.filename}</argument>
-                                <argument>-srcdir</argument>
-                                <argument>${app.dir}</argument>
-                                <argument>-srcfiles</argument>
-                                <argument>fxlauncher.jar</argument>
-                                <argument>-appclass</argument>
-                                <argument>fxlauncher.Launcher</argument>
-                                <argument>-name</argument>
-                                <argument>${project.name}</argument>
-                                <argument>-title</argument>
-                                <argument>${project.name}</argument>
-                                <argument>-vendor</argument>
-                                <argument>${app.vendor}</argument>
-                                <argument>-BappVersion=${version}</argument>
-                                <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
-                                <argument>-Bicon=${project.basedir}/target/classes/icons/Toolbox.icns</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -238,23 +335,8 @@
                         </goals>
                         <configuration>
                             <serverId>bcp-apps</serverId>
-                            <url>s3://apps.biggerconcept.com/epubtoolbox/</url>
+                            <url>${app.deploy_url}</url>
                             <fromDir>${project.build.directory}/dist/app</fromDir>
-                            <toDir>release</toDir>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-bin</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <configuration>
-                            <serverId>bcp-apps</serverId>
-                            <url>s3://apps.biggerconcept.com/epubtoolbox/</url>
-                            <fromDir>${project.build.directory}/dist/installer/bundles</fromDir>
-                            <includes>*.dmg</includes>
-                            <toDir>release</toDir>
                         </configuration>
                     </execution>
                 </executions>
@@ -268,7 +350,7 @@
             </extension>
         </extensions>
     </build>
-    
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
