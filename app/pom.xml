@@ -16,7 +16,7 @@
         <app.package>com.biggerconcept.${project.artifactId}</app.package>
         <app.mainClass>${app.package}.MainApp</app.mainClass>
 
-        <app.cacheDir>USERLIB/${app.package}</app.cacheDir>
+        <app.cacheDir>USERLIB/${app.package}/${app.channel}/</app.cacheDir>
         <app.vendor>Bigger Concept</app.vendor>
 
         <app.url>http://apps.biggerconcept.com/${project.artifactId}</app.url>
@@ -59,7 +59,7 @@
             </activation>
             <properties>
                 <app.channel>beta</app.channel>
-                <app.mvn_bucket>s3://mvn.biggerconcept.com/unstable</app.mvn_bucket>
+                <app.mvn_bucket>s3://mvn.biggerconcept.com/${app.channel}</app.mvn_bucket>
                 <app.release_url>${app.url}/release/${app.channel}</app.release_url>
                 <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
                 <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
