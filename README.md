@@ -106,12 +106,12 @@ Once the launcher is built you can now build the application package:
 ```bash
 cd app
 mvn clean package
-``
+```
 As part of the build, the surefire plugin will execute all JUnit tests (which are covered in detail below).
 
 ##### Building the installer
 
-The installer is a binary of the fxlauncher aforementioned. Building this binary can take some time, and must be done on the target platform (i.e. Mac OS .app files need to be built on a Mac). Before you do this you need to ensure that the launcher is built (see above).
+The installer is a binary of the fxlauncher aforementioned. Building this binary can take some time, and must be done on the target platform (i.e. Mac OS `.app` bundles need to be built on a Mac). Before you do this you need to ensure that the launcher is built (see above).
 
 To build an installer for the mac:
 ```bash
