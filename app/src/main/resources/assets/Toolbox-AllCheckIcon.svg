@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="45"
+   viewBox="0 0 45 45"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="Toolbox-AllCheckIcon.svg"
+   inkscape:export-filename="/home/andrewbigger/Projects/EpubToolbox/app/src/main/resources/icons/Toolbox-AllCheckIcon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="-26.048971"
+     inkscape:cy="16"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true" />
+  <defs
+     id="defs10117" />
+  <metadata
+     id="metadata10120">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(0,13)">
+    <g
+       id="g4542"
+       transform="matrix(1.1561758,0,0,1.1561758,4.0011872,-9.1563247)">
+      <g
+         transform="translate(-0.4603527,-2.3174865e-6)"
+         id="g4523">
+        <path
+           style="fill:none;stroke:#38b54a;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.90980392"
+           d="M 3.0510366,5.571884 C 6.3655997,9.1074179 6.453988,9.2400005 6.453988,9.2400005 l 7.20365,-7.4246212 v 0"
+           id="path3678"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#8cc63e;stroke-width:2.19839692;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94509804"
+           d="m 16.532497,6.0045086 14.05205,-0.187416 v 0"
+           id="path3688"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="translate(-0.46035253)"
+         id="g4527">
+        <path
+           style="fill:none;stroke:#38b54a;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.90980392"
+           d="m 3.0510363,15.735897 c 3.3145628,3.535534 3.4029518,3.668116 3.4029518,3.668116 l 7.2036499,-7.424621 v 0"
+           id="path3678-3"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#8cc63e;stroke-width:2.19839692;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94509804"
+           d="m 16.532497,16.163969 14.05205,-0.187416 v 0"
+           id="path3688-6"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="translate(-0.46035265)"
+         id="g4531">
+        <path
+           style="fill:none;stroke:#38b54a;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.90980392"
+           d="m 3.0510365,25.899907 c 3.3145631,3.535534 3.4029514,3.668116 3.4029514,3.668116 l 7.2036501,-7.424621 v 0"
+           id="path3678-7"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#8cc63e;stroke-width:2.19839692;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94509804"
+           d="m 16.532497,26.32343 14.05205,-0.187416 v 0"
+           id="path3688-5"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>
