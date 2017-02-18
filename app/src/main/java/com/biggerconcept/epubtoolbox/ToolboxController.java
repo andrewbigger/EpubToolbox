@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.MouseEvent;
@@ -23,20 +24,62 @@ import org.apache.commons.io.FileUtils;
 public class ToolboxController implements Initializable {
     public ToolboxService toolbox;
     public ConsoleService console;
-    public TooltipService tooltips;
+    public TooltipService tips;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
         toolbox = new ToolboxService();
         console = new ConsoleService(consoleView);
+        tips = new TooltipService();
         
         setupTooltips();
     }
     
-    private void setupTooltips() {
-        Tooltip tooltip = new Tooltip();
-        tooltip.setText("Record");
-        recordButton.setTooltip(tooltip);
+    private void setupTooltips() {          
+        unpackButton.setTooltip(
+                new Tooltip(tips.getTip("unpackButton"))
+        );
+        packButton.setTooltip(
+                new Tooltip(tips.getTip("packButton"))
+        );
+        
+        pickButton.setTooltip(
+                new Tooltip(tips.getTip("pickButton"))
+        );
+        epubCheckButton.setTooltip(
+                new Tooltip(tips.getTip("epubCheckButton"))
+        );
+        imageCheckButton.setTooltip(
+                new Tooltip(tips.getTip("imageCheckButton"))
+        );
+        sizeCheckButton.setTooltip(
+                new Tooltip(tips.getTip("sizeCheckButton"))
+        );
+        allCheckButton.setTooltip(
+                new Tooltip(tips.getTip("allCheckButton"))
+        );
+        recordButton.setTooltip(
+                new Tooltip(tips.getTip("recordButton"))
+        );
+        stopButton.setTooltip(
+                new Tooltip(tips.getTip("stopButton"))
+        );
+        playButton.setTooltip(
+                new Tooltip(tips.getTip("playButton"))
+        );
+        repeatButton.setTooltip(
+                new Tooltip(tips.getTip("repeatButton"))
+        );
+        clearConsoleButton.setTooltip(
+                new Tooltip(tips.getTip("clearConsoleButton"))
+        );
+        runOnCollectionChoice.setTooltip(
+                new Tooltip(tips.getTip("runOnCollectionChoice"))
+        );
+        exportLogButton.setTooltip(
+                new Tooltip(tips.getTip("exportLogButton"))
+        ); 
+        
     }
     
     private Stage toolboxStage() {
@@ -77,6 +120,9 @@ public class ToolboxController implements Initializable {
     public Button sizeCheckButton;
     
     @FXML
+    public Button allCheckButton;
+    
+    @FXML
     public TreeView<String> consoleView;
     
     @FXML
@@ -90,6 +136,15 @@ public class ToolboxController implements Initializable {
 
     @FXML
     private Button stopButton;
+    
+    @FXML
+    private Button repeatButton;
+    
+    @FXML
+    private Button clearConsoleButton;
+    
+    @FXML
+    private Button exportLogButton;
 
     public boolean isCollectionMode() {
         return runOnCollectionChoice.isSelected();
