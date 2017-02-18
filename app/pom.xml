@@ -9,27 +9,46 @@
 
     <name>EpubToolbox</name>
 
-    <organization><name>Bigger Concept</name></organization>
+    <organization>
+        <name>Bigger Concept</name>
+    </organization>
 
     <properties>
-        <app.filename>${project.name}</app.filename>
-        <app.package>com.biggerconcept.${project.artifactId}</app.package>
+        <app.vendor>${project.organization.name}</app.vendor>
+        <app.version>${project.version}</app.version>
+
+        <app.filename>${project.artifactId}</app.filename>
+        <app.package>com.lonelyplanet.${project.artifactId}</app.package>
         <app.mainClass>${app.package}.MainApp</app.mainClass>
-
+        <app.dir>${project.build.directory}/dist/app</app.dir>
+        <app.installerdir>${project.build.directory}/dist/installer</app.installerdir>
         <app.cacheDir>USERLIB/${app.package}/${app.channel}/</app.cacheDir>
-        <app.vendor>Bigger Concept</app.vendor>
-
-        <app.url>http://apps.biggerconcept.com/${project.artifactId}</app.url>
-
-        <app.deploy_bucket>s3://apps.biggerconcept.com</app.deploy_bucket>
-
-        <app.acceptDowngrade>false</app.acceptDowngrade>
 
         <app.dir>${project.build.directory}/dist/app</app.dir>
         <app.installerdir>${project.build.directory}/dist/installer</app.installerdir>
+        <app.acceptDowngrade>false</app.acceptDowngrade>
+
+        <app.icon.osx>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.icon.osx>
+        <app.icon.win>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.ico</app.icon.win>
+
+        <app.site.url>http://apps.biggerconcept.com/release/${app.channel}/${project.artifactId}/</app.site.url>
+        <app.site.repo>s3://mvn.biggerconcept.com/${app.channel}</app.site.repo>
+        <app.site.release>s3://apps.biggerconcept.com/release/${app.channel}/${project.artifactId}</app.site.release>
+        <app.site.dist>s3://apps.biggerconcept.com/dist/${app.channel}/${project.artifactId}</app.site.dist>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>spp-mvn-repo</id>
+            <url>${app.site.repo}</url>
+        </repository>
+        <site>
+            <id>spp-release</id>
+            <url>${app.site.release}</url>
+        </site>
+    </distributionManagement>
 
     <profiles>
         <profile>
@@ -43,10 +62,7 @@
             </activation>
             <properties>
                 <app.channel>alpha</app.channel>
-                <app.mvn_bucket>s3://mvn.biggerconcept.com/${app.channel}</app.mvn_bucket>
-                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
-                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
-                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+                <app.name>${project.name} Alpha</app.name>
             </properties>
         </profile>
         <profile>
@@ -59,14 +75,11 @@
             </activation>
             <properties>
                 <app.channel>beta</app.channel>
-                <app.mvn_bucket>s3://mvn.biggerconcept.com/${app.channel}</app.mvn_bucket>
-                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
-                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
-                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+                <app.name>${project.name} Beta</app.name>
             </properties>
         </profile>
         <profile>
-            <id>release</id>
+            <id>stable-release</id>
             <activation>
                 <property>
                   <name>channel</name>
@@ -75,18 +88,15 @@
             </activation>
             <properties>
                 <app.channel>stable</app.channel>
-                <app.mvn_bucket>s3://mvn.biggerconcept.com</app.mvn_bucket>
-                <app.release_url>${app.url}/release/${app.channel}</app.release_url>
-                <app.deploy_url>${app.deploy_bucket}/release/${app.channel}/${project.artifactId}</app.deploy_url>
-                <app.mac_icon>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.mac_icon>
+                <app.name>${project.name}</app.name>
             </properties>
         </profile>
         <profile>
             <id>mac-binary</id>
             <activation>
                 <property>
-                    <name>mac-bin</name>
-                    <value>true</value>
+                    <name>bin</name>
+                    <value>osx</value>
                 </property>
             </activation>
             <build>
@@ -94,10 +104,10 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.2.1</version>
+                        <version>1.4.0</version>
                         <executions>
                             <execution>
-                                <id>installer</id>
+                                <id>mac-installer</id>
                                 <phase>install</phase>
                                 <goals>
                                     <goal>exec</goal>
@@ -118,14 +128,14 @@
                                         <argument>-appclass</argument>
                                         <argument>fxlauncher.Launcher</argument>
                                         <argument>-name</argument>
-                                        <argument>${project.name}</argument>
+                                        <argument>${app.name}</argument>
                                         <argument>-title</argument>
-                                        <argument>${project.name}</argument>
+                                        <argument>${app.name}</argument>
                                         <argument>-vendor</argument>
                                         <argument>${app.vendor}</argument>
-                                        <argument>-BappVersion=${version}</argument>
-                                        <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
-                                        <argument>-Bicon=${app.mac_icon}</argument>
+                                        <argument>-BappVersion=${project.version}</argument>
+                                        <argument>-Bidentifier=${project.groupId}.${project.artifactId}-${app.channel}</argument>
+                                        <argument>-Bicon=${app.icon.osx}</argument>
                                     </arguments>
                                 </configuration>
                             </execution>
@@ -137,17 +147,91 @@
                         <version>1.0</version>
                         <executions>
                             <execution>
-                                <id>deploy-bin</id>
+                                <id>deploy-app</id>
                                 <phase>deploy</phase>
                                 <goals>
                                     <goal>upload</goal>
                                 </goals>
                                 <configuration>
-                                    <serverId>bcp-apps</serverId>
-                                    <url>s3://apps.biggerconcept.com/epubtoolbox/</url>
+                                    <serverId>bcp-dist</serverId>
+                                    <url>${app.site.dist}</url>
                                     <fromDir>${project.build.directory}/dist/installer/bundles</fromDir>
                                     <includes>*.dmg</includes>
-                                    <toDir>${app.channel}</toDir>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+       
+        <profile>
+            <id>windows-binary</id>
+            <activation>
+                <property>
+                    <name>bin</name>
+                    <value>win</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.4.0</version>
+                        <executions>
+                            <execution>
+                                <id>windows-installer</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>javapackager</executable>
+                                    <arguments>
+                                        <argument>-deploy</argument>
+                                        <argument>-native</argument>
+                                        <argument>msi</argument>
+                                        <argument>-outdir</argument>
+                                        <argument>${app.installerdir}</argument>
+                                        <argument>-outfile</argument>
+                                        <argument>${app.filename}</argument>
+                                        <argument>-srcdir</argument>
+                                        <argument>${app.dir}</argument>
+                                        <argument>-srcfiles</argument>
+                                        <argument>fxlauncher.jar</argument>
+                                        <argument>-appclass</argument>
+                                        <argument>fxlauncher.Launcher</argument>
+                                        <argument>-name</argument>
+                                        <argument>${app.name}</argument>
+                                        <argument>-title</argument>
+                                        <argument>${app.name}</argument>
+                                        <argument>-vendor</argument>
+                                        <argument>${app.vendor}</argument>
+                                        <argument>-BappVersion=${project.version}</argument>
+                                        <argument>-Bidentifier=${project.groupId}.${project.artifactId}-${app.channel}</argument>
+                                        <argument>-Bicon=${app.icon.win}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>wagon-maven-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                            <execution>
+                                <id>deploy-msi</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>upload</goal>
+                                </goals>
+                                <configuration>
+                                    <serverId>bcp-dist</serverId>
+                                    <url>${app.site.dist}</url>
+                                    <fromDir>${project.build.directory}\dist\installer\bundles</fromDir>
+                                    <includes>*.msi</includes>
                                 </configuration>
                             </execution>
                         </executions>
@@ -156,17 +240,6 @@
             </build>
         </profile>
     </profiles>
-
-    <distributionManagement>
-        <site>
-            <id>bcp-apps</id>
-            <url>${app.deploy_bucket}</url>
-        </site>
-        <repository>
-            <id>bcp-mvn-repo</id>
-            <url>${app.mvn_bucket}</url>
-        </repository>
-    </distributionManagement>
 
     <build>
         <plugins>
@@ -211,43 +284,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+
+             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.4.0</version>
+
+                <!-- Generate app.xml manifest -->
                 <executions>
-                    <execution>
-                        <id>unpack-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${java.home}/../bin/javapackager</executable>
-                            <arguments>
-                                <argument>-createjar</argument>
-                                <argument>-nocss2bin</argument>
-                                <argument>-appclass</argument>
-                                <argument>${app.mainClass}</argument>
-                                <argument>-srcdir</argument>
-                                <argument>${project.build.directory}/classes</argument>
-                                <argument>-outdir</argument>
-                                <argument>${project.build.directory}</argument>
-                                <argument>-outfile</argument>
-                                <argument>${project.build.finalName}.jar</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${java.home}/bin/java</executable>
-                            <commandlineArgs>${runfx.args}</commandlineArgs>
-                        </configuration>
-                    </execution>
                     <execution>
                         <id>create-manifest</id>
                         <phase>package</phase>
@@ -257,7 +301,7 @@
                         <configuration>
                             <mainClass>fxlauncher.CreateManifest</mainClass>
                             <arguments>
-                                <argument>${app.release_url}</argument>
+                                <argument>${app.site.url}</argument>
                                 <argument>${app.mainClass}</argument>
                                 <argument>${app.dir}</argument>
                                 <argument>--cache-dir=${app.cacheDir}</argument>
@@ -267,6 +311,8 @@
                             </arguments>
                         </configuration>
                     </execution>
+
+                    <!-- Embed app.xml inside fxlauncher.xml so we don't need to reference app.xml to start the app -->
                     <execution>
                         <id>embed-manifest-in-launcher</id>
                         <phase>package</phase>
@@ -283,6 +329,7 @@
                             </arguments>
                         </configuration>
                     </execution>
+
                     <execution>
                         <id>embed-custom-ui-in-launcher</id>
                         <phase>package</phase>
@@ -303,6 +350,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -334,8 +382,8 @@
                             <goal>upload</goal>
                         </goals>
                         <configuration>
-                            <serverId>bcp-apps</serverId>
-                            <url>${app.deploy_url}</url>
+                            <serverId>bcp-release</serverId>
+                            <url>${project.distributionManagement.site.url}</url>
                             <fromDir>${project.build.directory}/dist/app</fromDir>
                         </configuration>
                     </execution>
