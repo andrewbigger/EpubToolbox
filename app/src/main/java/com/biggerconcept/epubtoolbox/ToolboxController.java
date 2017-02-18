@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -22,11 +23,20 @@ import org.apache.commons.io.FileUtils;
 public class ToolboxController implements Initializable {
     public ToolboxService toolbox;
     public ConsoleService console;
+    public TooltipService tooltips;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
         toolbox = new ToolboxService();
         console = new ConsoleService(consoleView);
+        
+        setupTooltips();
+    }
+    
+    private void setupTooltips() {
+        Tooltip tooltip = new Tooltip();
+        tooltip.setText("Record");
+        recordButton.setTooltip(tooltip);
     }
     
     private Stage toolboxStage() {
@@ -47,6 +57,24 @@ public class ToolboxController implements Initializable {
                     choice + " epub " + prompt, toolboxStage());
         }
     }
+    
+    @FXML
+    public Button unpackButton;
+    
+    @FXML
+    public Button packButton;
+    
+    @FXML
+    public Button pickButton;
+    
+    @FXML
+    public Button epubCheckButton;
+    
+    @FXML
+    public Button imageCheckButton;
+    
+    @FXML
+    public Button sizeCheckButton;
     
     @FXML
     public TreeView<String> consoleView;

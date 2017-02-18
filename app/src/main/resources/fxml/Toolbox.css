@@ -4,29 +4,29 @@
 }
 
 #unpackButton {
-  -fx-background-image:url('../assets/unpack.png');
+  -fx-background-image:url('../icons/Toolbox-UnpackIcon.png');
 }
 
 #packButton {
-  -fx-background-image:url('../assets/packAction.png');
+  -fx-background-image:url('../icons/Toolbox-PackIcon.png');
 }
 
 #pickButton {
-  -fx-background-image:url('../assets/pick.png');
+  -fx-background-image:url('../icons/Toolbox-PickIcon.png');
 }
 
 #epubCheckButton {
-  -fx-background-image:url('../assets/checkIcon.png');
+  -fx-background-image:url('../icons/Toolbox-CheckIcon.png');
 }
 
 #imageCheckButton {
-  -fx-background-image:url('../assets/imageCheckIcon.png');
+  -fx-background-image:url('../icons/Toolbox-ImageCheckIcon.png');
 }
 
 #sizeCheckButton {
-  -fx-background-image:url('../assets/sizeCheckIcon.png');
+  -fx-background-image:url('../icons/Toolbox-SizeCheckIcon.png');
 }
 
 #allCheckButton {
-  -fx-background-image:url('../assets/allCheckIcon.png');
+  -fx-background-image:url('../icons/Toolbox-AllCheckIcon.png');
 }
