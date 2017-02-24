@@ -18,7 +18,7 @@
         <app.version>${project.version}</app.version>
 
         <app.filename>${project.artifactId}</app.filename>
-        <app.package>com.lonelyplanet.${project.artifactId}</app.package>
+        <app.package>com.biggerconcept.${project.artifactId}</app.package>
         <app.mainClass>${app.package}.MainApp</app.mainClass>
         <app.dir>${project.build.directory}/dist/app</app.dir>
         <app.installerdir>${project.build.directory}/dist/installer</app.installerdir>
@@ -30,6 +30,7 @@
 
         <app.icon.osx>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.icns</app.icon.osx>
         <app.icon.win>${project.basedir}/target/classes/icons/Toolbox-${app.channel}.ico</app.icon.win>
+        <app.icon.deb>${project.basedir}/target/classes/icons/Toolbox-${app.channel}-512x512.png</app.icon.deb>
 
         <app.site.url>http://apps.biggerconcept.com/release/${app.channel}/${project.artifactId}/</app.site.url>
         <app.site.repo>s3://mvn.biggerconcept.com/${app.channel}</app.site.repo>
@@ -165,6 +166,82 @@
             </build>
         </profile>
        
+        <profile>
+            <id>debian-binary</id>
+            <activation>
+                <property>
+                    <name>bin</name>
+                    <value>deb</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.4.0</version>
+                        <executions>
+                            <execution>
+                                <id>deb-installer</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>javapackager</executable>
+                                    <arguments>
+                                        <argument>-deploy</argument>
+                                        <argument>-native</argument>
+                                        <argument>-outdir</argument>
+                                        <argument>${app.installerdir}</argument>
+                                        <argument>-outfile</argument>
+                                        <argument>${app.filename}</argument>
+                                        <argument>-srcdir</argument>
+                                        <argument>${app.dir}</argument>
+                                        <argument>-srcfiles</argument>
+                                        <argument>fxlauncher.jar</argument>
+                                        <argument>-appclass</argument>
+                                        <argument>fxlauncher.Launcher</argument>
+                                        <argument>-name</argument>
+                                        <argument>${app.name}</argument>
+                                        <argument>-title</argument>
+                                        <argument>${app.name}</argument>
+                                        <argument>-vendor</argument>
+                                        <argument>${app.vendor}</argument>
+                                        <argument>-Bcategory=Development</argument>
+                                        <argument>-BlicenceType=MIT</argument>
+                                        <argument>-BappVersion=${project.version}</argument>
+                                        <argument>-Bidentifier=${project.groupId}.${project.artifactId}-${app.channel}</argument>
+                                        <argument>-Bicon=${app.icon.deb}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>wagon-maven-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                            <execution>
+                                <id>deploy-app</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>upload</goal>
+                                </goals>
+                                <configuration>
+                                    <serverId>bcp-dist</serverId>
+                                    <url>${app.site.dist}</url>
+                                    <fromDir>${project.build.directory}/dist/installer/bundles</fromDir>
+                                    <includes>*.deb</includes>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
         <profile>
             <id>windows-binary</id>
             <activation>
