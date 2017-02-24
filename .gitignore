@@ -1,3 +1,4 @@
 /app/target/*
 /launcher/target/*
 /launcher/nbproject/
+nbactions*
