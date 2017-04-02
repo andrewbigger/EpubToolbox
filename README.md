@@ -81,11 +81,28 @@ If you wish to fork this project you'll also require Java:
 
 You can also download launchers tuned to the [alpha](http://apps.biggerconcept.com/dist/alpha/epubtoolbox/EpubToolbox-1.0.dmg) or [beta](http://apps.biggerconcept.com/dist/beta/epubtoolbox/EpubToolbox-1.0.dmg) channels for testing.
 
+#### Windows Install
+1. Download the compiled msi by selecting the Windows link from the bottom of [http://apps.biggerconcept.com/epubtoolbox](http://apps.biggerconcept.com/epubtoolbox)
+2. Double click the msi anx follow the installation wizard instructions.
+
+
+#### Debian Linux install
+1. Download the .deb package from the bottom of [http://apps.biggerconcept.com/epubtoolbox](http://apps.biggerconcept.com
+2. Open a terminal and cd to the download folder i.e.:
+```bash
+cd ~/
+```
+3. Install package using dpkg i.e.:
+```bash
+sudo dpkg -i epubtoolbox-1.0.deb
+```
 #### Fork and make your own
 
-- `git clone git@github.com:andrewbigger/EpubToolbox.git` 
+- SSH: `git clone git@github.com:andrewbigger/EpubToolbox.git`
+- HTTPS `git clone https://github.com/andrewbigger/EpubToolbox.git`
 
-##### Compiling the application
+
+### Compiling the application
 
 There are 2 projects included within this repo:
 - app
@@ -109,7 +126,7 @@ mvn clean package
 ```
 As part of the build, the surefire plugin will execute all JUnit tests (which are covered in detail below).
 
-##### Building the installer
+### Building the installer
 
 The installer is a binary of the fxlauncher aforementioned. Building this binary can take some time, and must be done on the target platform (i.e. Mac OS `.app` bundles need to be built on a Mac). Before you do this you need to ensure that the launcher is built (see above).
 
@@ -119,7 +136,7 @@ cd app
 mvn clean install -Dbin=osx
 ```
 
-##### Deploying the application
+## Deploying the application
 To deploy the application (without building the binary - which places the new classes on the webserver), you first need to ensure that the wagon plugin is correctly configured within the `pom.xml` file.
 
 You may deploy the application regardless of whether you're on a PC, Mac or Linux (it just sends the class files to the webserver).
