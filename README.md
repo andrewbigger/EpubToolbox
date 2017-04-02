@@ -24,7 +24,7 @@ The file size validator reports on any html files that are larger than 300kb, an
 
 The image size validator reports on images larger than 4.2 million pixels in size. Although some retailers accept (or perhaps encourage) epubs with images larger than this (for high definition readers), Apple does not. Ensure your epubs pass this check if you intend to publish on the iBookstore.
 
-Finally there is an all checks button ![all checks icon](https://github.com/andrewbigger/EpubToolbox/blob/master/app/src/main/resources/icons/AllCheckIcon.png?raw=true) which runs all of the aforementioned checks on the selected file one after the other.
+Finally there is an all checks button ![all checks icon](https://github.com/andrewbigger/EpubToolbox/blob/master/app/src/main/resources/icons/Toolbox-AllCheckIcon.png?raw=true) which runs all of the aforementioned checks on the selected file one after the other.
 
 ### Utilities
 
