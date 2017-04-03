@@ -30,7 +30,7 @@ public class SplashLoadFeature extends ApplicationTest {
     public void display_LoadScreen() throws Exception {
         System.out.println("Show load splash screen");
         
-        sleep(10, SECONDS);
+        sleep(1, SECONDS);
     }
     
     @Test

@@ -32,7 +32,7 @@ public class SplashUpdateFeature extends ApplicationTest {
     public void display_UpdateScreen() throws Exception {
         System.out.println("Show update splash screen");
        
-        sleep(10, SECONDS);
+        sleep(1, SECONDS);
     }
     
     @Test
