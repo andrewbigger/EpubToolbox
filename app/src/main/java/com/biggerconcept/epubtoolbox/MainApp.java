@@ -18,6 +18,8 @@ public class MainApp extends Application {
         
         stage.setTitle("EpubToolbox");
         stage.setScene(scene);
+        stage.setMinHeight(400);
+        stage.setMinWidth(615);
         stage.show();
     }
 
