@@ -97,7 +97,7 @@
             <activation>
                 <property>
                     <name>bin</name>
-                    <value>osx</value>
+                    <value>dmg</value>
                 </property>
             </activation>
             <build>
@@ -171,7 +171,7 @@
             <activation>
                 <property>
                     <name>bin</name>
-                    <value>deb</value>
+                    <value>dpkg</value>
                 </property>
             </activation>
             <build>
@@ -247,7 +247,7 @@
             <activation>
                 <property>
                     <name>bin</name>
-                    <value>win</value>
+                    <value>msi</value>
                 </property>
             </activation>
             <build>

@@ -2,3 +2,8 @@
 /launcher/target/*
 /launcher/nbproject/
 nbactions*
+
+.vscode
+.settings
+.project
+.classpath
