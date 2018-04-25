@@ -1,0 +1,29 @@
+options:
+  docker: true
+ 
+image:
+  name: maven:3.3.9-jdk-8
+  aws:
+    access-key: $AWS_ACCESS_KEY_ID 
+    secret-key: $AWS_SECRET_ACCESS_KEY
+
+pipelines:
+  default:
+    - step:
+      - name: Build
+      - cd launcher && mvn package
+      - cd app && mvn test
+    - step:
+        name: Deploy Beta
+        script:
+          - cd app && mvn deploy -Dchannel=beta
+        deployment: staging
+
+  branches:
+    master:
+     - step:
+        name: Deploy
+        script:
+          - cd app && mvn deploy -Dchannel=stable
+        deployment: production
+        
