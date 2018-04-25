@@ -10,9 +10,10 @@ image:
 pipelines:
   default:
     - step:
-      - name: Build
-      - cd launcher && mvn package
-      - cd app && mvn test
+        name: Build and Test
+        script:
+          - cd launcher && mvn package
+          - cd app && mvn test
     - step:
         name: Deploy Beta
         script:
