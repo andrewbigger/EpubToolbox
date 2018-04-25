@@ -2,26 +2,19 @@ options:
   docker: true
  
 image:
-  name: tgalopin/maven-javafx
+  name: maven:3.3.9-jdk-8
 
 pipelines:
-  default:
-    - step:
-        name: Build and Test
-        script:
-          - cd launcher && mvn package
-          - cd app && mvn test
-    - step:
-        name: Deploy Beta
-        script:
-          - cd app && mvn deploy -Dchannel=beta
-        deployment: staging
-
   branches:
     master:
-     - step:
-        name: Deploy
-        script:
-          - cd app && mvn deploy -Dchannel=stable
-        deployment: production
-        
+      - step:
+          name: Test
+          script:
+            - cd launcher && mvn package
+            - cd app && mvn test
+      - step:
+          name: Deploy
+          script:
+            - cd app && mvn deploy -Dchannel=stable
+          deployment: production
+      
