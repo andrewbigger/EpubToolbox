@@ -3,9 +3,6 @@ options:
  
 image:
   name: maven:3.3.9-jdk-8
-  aws:
-    access-key: $AWS_ACCESS_KEY_ID 
-    secret-key: $AWS_SECRET_ACCESS_KEY
 
 pipelines:
   default:
