@@ -2,7 +2,10 @@ options:
   docker: true
  
 image:
-  name: josediaz30/oracle-jdk8-maven3
+  name: 536482450038.dkr.ecr.ap-southeast-2.amazonaws.com/biggerconcept-mvn-jdk-agent:latest
+  aws:
+    access-key: $AWS_ACCESS_KEY_ID 
+    secret-key: $AWS_SECRET_ACCESS_KEY
 
 pipelines:
   branches:
@@ -11,7 +14,7 @@ pipelines:
           name: Test
           script:
             - cd launcher && mvn package
-            - cd app && mvn test
+            - Xvfb :99 &>/dev/null & export DISPLAY=:99 && cd app && mvn test
       - step:
           name: Deploy
           script:
