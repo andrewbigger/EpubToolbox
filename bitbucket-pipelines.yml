@@ -13,7 +13,7 @@ pipelines:
       - step:
           name: Test
           script:
-            - cd launcher && mvn package
+            - Xvfb :99 &>/dev/null & export DISPLAY=:99 && cd launcher && mvn package
             - Xvfb :99 &>/dev/null & export DISPLAY=:99 && cd app && mvn test
       - step:
           name: Deploy
