@@ -1,4 +1,4 @@
-# ![epubtoolbox](https://bitbucket.org/biggerconcept/bc-icons/raw/master/dist/icons/bc-epubtoolbox-banner/bc-epubtoolbox-banner-64x64.png) EpubToolbox
+# EpubToolbox
 
 Desktop utility for packing, unpacking and validating epub files
 
