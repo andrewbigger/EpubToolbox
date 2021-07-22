@@ -10,14 +10,15 @@ The epub toolbox is a handy desktop utility for a basket of epub file management
 
 ### Packing and Unpacking
 
-The pack and unpack features are wrappers around the [Zip4J](http://www.lingala.net/zip4j/) library, and handle the zipping and unzipping of non DRM protected epub files. Simply select the pack ![pack icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-PackIcon.png?raw=true) or unpack ![unpack icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-UnpackIcon.png?raw=true) buttons (on the top left) and follow the prompts. You'll be asked to choose your input file, then choose your output file, and the toolbox handles the rest! The pack action will also ensure that the mimetype file is uncompressed at the top of the archive as per the epub standard.
+The pack and unpack features are wrappers around the [Zip4J](http://www.lingala.net/zip4j/) library, and handle the zipping and unzipping of non DRM protected epub files. Simply select the pack ![pack icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-PackIcon.png?raw=true) or unpack ![unpack icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-UnpackIcon.png?raw=true) buttons (on the top left) and follow the prompts. You'll be asked to choose your input file, then choose your output file, and the toolbox handles the rest! The pack action will also ensure that the mimetype file is uncompressed at the top of the archive as per the epub standard.
 
 ### Validators
 
 The toolbox includes 3 validators which can be accessed from the main toolbar:
-- ![epub check icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-CheckIcon.png?raw=true) EpubCheck validator
-- ![file size check icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-SizeCheckIcon.png?raw=true) File Size validator
-- ![image size check icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-ImageCheckIcon.png?raw=true) Image Size validator
+
+- ![epub check icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-CheckIcon.png?raw=true) EpubCheck validator
+- ![file size check icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-SizeCheckIcon.png?raw=true) File Size validator
+- ![image size check icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-ImageCheckIcon.png?raw=true) Image Size validator
 
 The epubcheck validator is a wrapper arround the [IDPF epub checker](github.com/idpf/epubcheck) which is a standard check of epub validity used by most epub retailers. The results will appear in the console view underneath the toolbar.
 
@@ -27,7 +28,7 @@ The file size validator reports on any html files that are larger than 300kb, an
 
 The image size validator reports on images larger than 4.2 million pixels in size. Although some retailers accept (or perhaps encourage) epubs with images larger than this (for high definition readers), Apple does not. Ensure your epubs pass this check if you intend to publish on the iBookstore.
 
-Finally there is an all checks button ![all checks icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-AllCheckIcon.png?raw=true) which runs all of the aforementioned checks on the selected file one after the other.
+Finally there is an all checks button ![all checks icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-AllCheckIcon.png?raw=true) which runs all of the aforementioned checks on the selected file one after the other.
 
 ### Utilities
 
@@ -38,7 +39,7 @@ Provided in the dropdown on the right are some utilities for removing unwanted a
 
 The OS Artefact removal utility will remove any `.DS_Store` or `thumbs.db` files which are erroneously zipped up into epub files. Similarly the iTunesMetadata.plist removal utility will remove the `iTunesMetadata.plist` file which is automatically added to epubs once they're opened in iTunes (for side loading onto an iPad).
 
-Finally the Pick Utility ![pick utility icon](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/app/src/main/resources/icons/Toolbox-PickIcon.png?raw=true) allows you to provide a comma separated list of filenames that you'd like to select from a folder of epubs. 
+Finally the Pick Utility ![pick utility icon](https://github.com/andrewbigger/epubtoolbox/blob/main/app/src/main/resources/icons/Toolbox-PickIcon.png?raw=true) allows you to provide a comma separated list of filenames that you'd like to select from a folder of epubs. 
 
 ### Transactional Features
 
@@ -205,4 +206,4 @@ Alternatively if you wish to fork this project and make me a pull request, pleas
 
 ## License
 
-This project is covered by the [MIT licence](https://opensource.org/licenses/MIT), you can read it [here](https://bitbucket.org/biggerconcept/epubtoolbox/blob/master/LICENSE.md).
+This project is covered by the [MIT licence](https://opensource.org/licenses/MIT), you can read it [here](https://github.com/andrewbigger/epubtoolbox/blob/main/LICENSE.md).
