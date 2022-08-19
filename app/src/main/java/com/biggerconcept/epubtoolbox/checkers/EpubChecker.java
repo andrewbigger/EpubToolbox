@@ -6,7 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.PrintStream;
 
-public class EpubChecker extends Checker implements _IChecker {
+public class EpubChecker extends Checker implements IChecker {
     private final ByteArrayOutputStream outCapture = new ByteArrayOutputStream();
     private final PrintStream outCaptureStream;
     

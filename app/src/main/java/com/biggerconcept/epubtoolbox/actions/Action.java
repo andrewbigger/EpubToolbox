@@ -5,7 +5,7 @@ import com.biggerconcept.epubtoolbox.results.Result;
 import java.io.File;
 import org.apache.commons.io.FileUtils;
 
-public class Action implements _IAction {
+public class Action implements IAction {
     protected final String[] EPUB_EXTENSIONS = new String[1];
     protected File inputTarget;
     protected File outputTarget;

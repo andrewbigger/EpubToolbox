@@ -3,7 +3,7 @@ package com.biggerconcept.epubtoolbox.actions;
 import com.biggerconcept.epubtoolbox.checkers.Checker;
 import java.io.File;
 
-public class CheckerAction extends Action implements _IAction {
+public class CheckerAction extends Action implements IAction {
     
     public CheckerAction(
             String task, File targetLocation, boolean runOnCollection) {

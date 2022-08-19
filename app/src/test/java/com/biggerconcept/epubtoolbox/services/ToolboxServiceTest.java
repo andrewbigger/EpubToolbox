@@ -1,7 +1,7 @@
 package com.biggerconcept.epubtoolbox.services;
 
 import com.biggerconcept.epubtoolbox.actions.Action;
-import com.biggerconcept.epubtoolbox.actions._IAction;
+import com.biggerconcept.epubtoolbox.actions.IAction;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class ToolboxServiceTest {
         task = new FakeAction("SomeAction", fakeEpub, false);
     }
     
-    private class FakeAction extends Action implements _IAction {
+    private class FakeAction extends Action implements IAction {
         
         public FakeAction(
                 String task, File targetLocation, boolean runOnCollection) {

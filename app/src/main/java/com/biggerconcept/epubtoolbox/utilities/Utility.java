@@ -4,7 +4,7 @@ import com.biggerconcept.epubtoolbox.results.Result;
 import java.io.File;
 import java.util.UUID;
 
-public class Utility implements _IUtility {
+public class Utility implements IUtility {
     protected File workDir;
     protected File inLocation;
     protected File outLocation;

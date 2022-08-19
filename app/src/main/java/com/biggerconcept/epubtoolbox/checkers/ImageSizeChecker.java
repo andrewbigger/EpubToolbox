@@ -8,7 +8,7 @@ import java.util.Collection;
 import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 
-public class ImageSizeChecker extends Checker implements _IChecker {
+public class ImageSizeChecker extends Checker implements IChecker {
     public final double IMAGE_SIZE_THRESHOLD = 4.2;
     private final String[] TARGET_EXTENSIONS = new String[4];
     

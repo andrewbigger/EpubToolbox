@@ -2,7 +2,7 @@ package com.biggerconcept.epubtoolbox.results;
 
 import java.util.ArrayList;
 
-public class Result implements _IResult {
+public class Result implements IResult {
     private final ArrayList<Message> messages;
     private final ArrayList<Result> results;
     private String title;

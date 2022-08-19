@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 
-public class Checker implements _IChecker {
+public class Checker implements IChecker {
     protected File workDir;
     protected static File ePub;
     protected Result checkOutcome;

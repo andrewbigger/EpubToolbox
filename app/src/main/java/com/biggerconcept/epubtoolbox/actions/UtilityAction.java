@@ -3,7 +3,7 @@ package com.biggerconcept.epubtoolbox.actions;
 import com.biggerconcept.epubtoolbox.utilities.Utility;
 import java.io.File;
 
-public class UtilityAction extends Action implements _IAction {
+public class UtilityAction extends Action implements IAction {
     
     public UtilityAction(
             String task, File inputTargetLocation, 

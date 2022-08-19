@@ -1,6 +1,6 @@
 package com.biggerconcept.epubtoolbox.results;
 
-public class Message implements _IMessage {
+public class Message implements IMessage {
     private final String content;
     private boolean error;
     private boolean warning;

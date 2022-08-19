@@ -3,7 +3,7 @@ package com.biggerconcept.epubtoolbox.checkers;
 import com.biggerconcept.epubtoolbox.results.Result;
 import java.io.File;
 
-public class AllChecker extends Checker implements _IChecker {
+public class AllChecker extends Checker implements IChecker {
     protected final Checker[] validations;
     
     public AllChecker(File inEpub) {

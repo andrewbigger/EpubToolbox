@@ -5,7 +5,7 @@ import java.io.File;
 import java.util.Collection;
 import org.apache.commons.io.FileUtils;
 
-public class FileSizeChecker extends Checker implements _IChecker {
+public class FileSizeChecker extends Checker implements IChecker {
     public final long FILE_SIZE_THRESHOLD = 300;
     private final String[] TARGET_EXTENSIONS = new String[3];
 
