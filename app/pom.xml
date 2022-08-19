@@ -21,6 +21,9 @@
         <app.dir>${project.build.directory}/app</app.dir>
         <app.installerdir>${project.build.directory}/installer</app.installerdir>
         <app.acceptDowngrade>false</app.acceptDowngrade>
+        <app.icon.osx>${project.basedir}/target/classes/icons/Toolbox.icns</app.icon.osx>
+        <app.icon.win>${project.basedir}/target/classes/icons/Toolbox.ico</app.icon.win>
+        <app.icon.deb>${project.basedir}/target/classes/icons/Toolbox-512x512.png</app.icon.deb>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
@@ -119,7 +122,6 @@
                         </goals>
                         <configuration>
                             <executable>javapackager</executable>
-
                             <arguments>
                                 <argument>-deploy</argument>
                                 <argument>-native</argument>
@@ -141,6 +143,9 @@
                                 <argument>${app.vendor}</argument>
                                 <argument>-BappVersion=${app.version}</argument>
                                 <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
+                                <argument>-Bicon=${app.icon.osx}</argument>
+                                <argument>-Bicon=${app.icon.deb}</argument>
+                                <argument>-Bicon=${app.icon.win}</argument>
                             </arguments>
                         </configuration>
                     </execution>
