@@ -8,10 +8,26 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Epub toolbox application
+ */
 public class App extends Application {
-
+    /**
+     * Default scene for the toolbox
+     */
     private static Scene scene;
 
+    /**
+     * Starts EPUB toolbox
+     * 
+     * Loads the toolbox view from resources, applies styles and sets the
+     * window title and dimensions.
+     * 
+     * Then the stage will be shown.
+     * 
+     * @param stage
+     * @throws IOException 
+     */
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(
@@ -28,6 +44,13 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * Main
+     * 
+     * Launches Toolbox FX application
+     * 
+     * @param args 
+     */
     public static void main(String[] args) {
         launch();
     }

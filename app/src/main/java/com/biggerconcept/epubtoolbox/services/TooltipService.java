@@ -3,13 +3,30 @@ package com.biggerconcept.epubtoolbox.services;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Service for managing UI tool tips.
+ * 
+ * @author abigger
+ */
 public class TooltipService {
+    /**
+     * Map of attributes and tool tip text.
+     */
     private final Map TOOL_TIPS = new HashMap();
     
+    /**
+     * Constructor for the tool tip service.
+     * 
+     * This will build a map of UI components that should be annotated
+     * with tool tips and their value.
+     */
     public TooltipService() {
         populateTips();
     }
     
+    /**
+     * Registers component tool tips with the service tool tip map.
+     */
     private void populateTips() {
         TOOL_TIPS.put("unpackButton", "Unpack ePub");
         TOOL_TIPS.put("packButton", "Pack ePub");
@@ -31,6 +48,15 @@ public class TooltipService {
         TOOL_TIPS.put("exportLogButton", "Save messages to text file");
     }
     
+    /**
+     * Retrieves a tool tip for a given component by name.
+     * 
+     * When the tool tip is not registered, then an empty string will be
+     * returned.
+     * 
+     * @param componentName
+     * @return 
+     */
     public String getTip(String componentName) {
         String tip = (String) TOOL_TIPS.get(componentName);
         return tip;

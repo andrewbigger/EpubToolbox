@@ -4,7 +4,22 @@ import com.biggerconcept.epubtoolbox.checkers.*;
 import com.biggerconcept.epubtoolbox.utilities.*;
 import java.io.File;
 
-public class ActionFactory {    
+/**
+ * Factory for building toolbox check and utility classes
+ * 
+ * @author abigger
+ */
+public class ActionFactory {
+    /**
+     * Builds a check action based on the given class and target file.
+     * 
+     * If the given checker class does not match any of the toolbox check 
+     * actions then an UnsupportedOperationException will be raised.
+     * 
+     * @param checkerClass
+     * @param File target
+     * @return
+     */
     public static Checker createChecker(String checkerClass, File target) {
         Checker returnChecker;
         
@@ -32,6 +47,18 @@ public class ActionFactory {
         return returnChecker;
     }
     
+    /**
+     * Builds a utility action based on the given utility class, input and 
+     * output files.
+     * 
+     * When the given checker class does not match any of the toolbox
+     * utilities, then an UnsupportedOperationException will be thrown.
+     * 
+     * @param checkerClass
+     * @param target
+     * @param outTarget
+     * @return 
+     */
     public static Utility createUtility (
             String checkerClass, File target, File outTarget) {
         
