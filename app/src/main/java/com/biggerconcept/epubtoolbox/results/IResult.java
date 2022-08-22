@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Interface for a Result class
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public interface IResult {
     /**

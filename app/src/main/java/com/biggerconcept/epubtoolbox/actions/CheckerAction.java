@@ -6,7 +6,7 @@ import java.io.File;
 /**
  * Class representing an action that runs a check on the given EPUB file
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class CheckerAction extends Action implements IAction {
     /**

@@ -8,7 +8,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Action for checking the file size of all HTML files
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class FileSizeChecker extends Checker implements IChecker {
     /**

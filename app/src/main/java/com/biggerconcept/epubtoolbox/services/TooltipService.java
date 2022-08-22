@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Service for managing UI tool tips.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class TooltipService {
     /**

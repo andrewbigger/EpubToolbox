@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * Factory for building toolbox check and utility classes
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class ActionFactory {
     /**

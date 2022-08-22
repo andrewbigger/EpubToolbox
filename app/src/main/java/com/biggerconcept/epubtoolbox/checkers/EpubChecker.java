@@ -9,7 +9,7 @@ import java.io.PrintStream;
 /**
  * Action that executes the Adobe EPUB check tool
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class EpubChecker extends Checker implements IChecker {
     /**

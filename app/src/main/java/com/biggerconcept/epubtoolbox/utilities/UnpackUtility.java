@@ -7,7 +7,7 @@ import org.apache.commons.io.FilenameUtils;
 /**
  * Utility for unpacking EPUB files.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class UnpackUtility extends Utility {
     /**

@@ -3,7 +3,7 @@ package com.biggerconcept.epubtoolbox.results;
 /**
  * Class representing a result message
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class Message implements IMessage {
     /**

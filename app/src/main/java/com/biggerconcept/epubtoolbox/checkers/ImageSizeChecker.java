@@ -11,7 +11,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Action for checking the size of all images.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class ImageSizeChecker extends Checker implements IChecker {
     /**

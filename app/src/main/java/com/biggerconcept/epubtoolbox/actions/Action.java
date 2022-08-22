@@ -9,6 +9,8 @@ import org.apache.commons.io.FileUtils;
  * Class representing a toolbox action.
  * 
  * Implements the Action interface IAction
+ * 
+ * @author Andrew Bigger
  */
 public class Action implements IAction {
     /**

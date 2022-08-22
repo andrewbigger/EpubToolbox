@@ -13,7 +13,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Utility for copying a list of EPUB files from a folder into another folder.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class PickUtility extends Utility {
     /**

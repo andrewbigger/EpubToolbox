@@ -6,7 +6,7 @@ import java.io.File;
 /**
  * Class representing a utility action that modifies a given EPUB file
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class UtilityAction extends Action implements IAction {
     

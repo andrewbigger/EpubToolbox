@@ -9,7 +9,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Epub toolbox application
+ * EPUB toolbox application
+ * 
+ * @author Andrew Bigger
  */
 public class App extends Application {
     /**

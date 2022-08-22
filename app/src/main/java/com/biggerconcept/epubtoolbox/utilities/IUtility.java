@@ -6,7 +6,7 @@ import java.io.File;
 /**
  * Interface for a utility class.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public interface IUtility {    
     /**

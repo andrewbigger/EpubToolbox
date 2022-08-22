@@ -5,7 +5,7 @@ import com.biggerconcept.epubtoolbox.results.Result;
 /**
  * Interface for an Action
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public interface IAction {
    /**

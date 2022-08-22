@@ -2,6 +2,8 @@ package com.biggerconcept.epubtoolbox.exceptions;
 
 /**
  * Exception for when no choice has been made.
+ * 
+ * @author Andrew Bigger
  */
 public class NoChoiceMadeException extends Exception {
 

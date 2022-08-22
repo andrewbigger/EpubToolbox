@@ -8,7 +8,7 @@ import net.lingala.zip4j.util.Zip4jConstants;
 /**
  * Utility class for packing an expanded EPUB
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class PackUtility extends Utility {
     /**

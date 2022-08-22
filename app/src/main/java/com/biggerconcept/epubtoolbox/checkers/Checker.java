@@ -11,7 +11,7 @@ import org.apache.commons.io.FileUtils;
  * 
  * This is the base class for all checks.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class Checker implements IChecker {
     /**

@@ -3,7 +3,7 @@ package com.biggerconcept.epubtoolbox.results;
 /**
  * Interface for a toolbox console message.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public interface IMessage {
     /**

@@ -6,7 +6,7 @@ import java.io.File;
 /**
  * Runs all validations on a given EPUB.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class AllChecker extends Checker implements IChecker {
     /**

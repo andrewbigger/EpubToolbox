@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 /**
  * Toolbox view model.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class ToolboxService {
     /**

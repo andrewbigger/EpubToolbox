@@ -7,7 +7,7 @@ import java.util.UUID;
 /**
  * Utility superclass that implements the IUtility interface.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class Utility implements IUtility {
     /**

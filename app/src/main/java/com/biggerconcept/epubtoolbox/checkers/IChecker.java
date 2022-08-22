@@ -8,7 +8,7 @@ import java.io.File;
  * 
  * Specifies the members of a valid check class.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public interface IChecker {
     /**

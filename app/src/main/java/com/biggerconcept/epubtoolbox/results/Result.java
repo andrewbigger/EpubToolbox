@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Class representing a check or action result.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class Result implements IResult {
     /**

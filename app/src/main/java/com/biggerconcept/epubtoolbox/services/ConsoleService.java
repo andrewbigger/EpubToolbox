@@ -8,7 +8,7 @@ import javafx.scene.control.TreeView;
 /**
  * Service for managing the toolbox status console.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class ConsoleService {
     /**

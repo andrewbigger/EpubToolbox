@@ -10,7 +10,7 @@ import org.apache.commons.io.FilenameUtils;
  * Utility for removing artifacts like .DS_Store and thumbs.db from a
  * packed EPUB.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class OSArtefactRemovalUtility extends Utility {
     /**
