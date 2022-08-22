@@ -5,9 +5,9 @@ import java.io.File;
 import org.apache.commons.io.FilenameUtils;
 
 /**
- * Utility for removing the itunes metadata artifact from an EPUB file.
+ * Utility for removing the iTunes metadata artifact from an EPUB file.
  * 
- * @author abigger
+ * @author Andrew Bigger
  */
 public class ItunesMetaRemovalUtility extends Utility {
     /**
