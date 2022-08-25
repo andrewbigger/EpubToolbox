@@ -111,8 +111,8 @@ sudo dpkg -i epubtoolbox-1.0.deb
 
 #### Fork and make your own
 
-- SSH: `git clone git@bitbucket.org/biggerconcept/epubtoolbox.git`
-- HTTPS `git clone https://bitbucket.org/biggerconcept/epubtoolbox.git`
+- SSH: `git clone git@github.com/andrewbigger/epubtoolbox.git`
+- HTTPS `git clone https://github.com/andrewbigger/epubtoolbox.git`
 
 ### Compiling the application
 
@@ -123,7 +123,7 @@ There are 2 projects included within this repo:
 
 The launcher is a [fxlauncher](https://github.com/edvin/fxlauncher) class, which bootstraps the application, and downloads any updates from the remote server. __Do not place any code you wish to update in the launcher project__ as it will not be updated along with the app. The launcher works by maintaining an application manifest locally, and checking a manifest on the remote site for changes. See the fxlauncher documentation for more on how this works.
 
-The app project is where all the magic happens. 
+The app project is where all the magic happens.
 
 To compile you'll first need to build the launcher:
 
@@ -140,31 +140,6 @@ mvn clean package
 ```
 
 As part of the build, the surefire plugin will execute all JUnit tests (which are covered in detail below).
-
-### Building the installer
-
-The installer is a binary of the fxlauncher aforementioned. Building this binary can take some time, and must be done on the target platform (i.e. Mac OS `.app` bundles need to be built on a Mac). Before you do this you need to ensure that the launcher is built (see above).
-
-To build an installer for mac osx:
-
-```bash
-cd app
-mvn clean install -Dbin=dmg
-```
-
-To build an installer for windows:
-
-```bash
-cd app
-mvn clean install -Dbin=msi
-```
-
-To build an installer for debian linux:
-
-```bash
-cd app
-mvn clean install -Dbin=dpkg
-```
 
 ## Deploying the application
 
@@ -200,7 +175,7 @@ Describe and show how to run the tests with code examples.
 
 ## Issues and Contributions
 
-Please [raise an issue](https://bitbucket.org/biggerconcept/epubtoolbox/issues/new) if you have trouble with the toolbox, or suggestions for its future development.
+Please [raise an issue](https://github.com/andrewbigger/epubtoolbox/issues/new) if you have trouble with the toolbox, or suggestions for its future development.
 
 Alternatively if you wish to fork this project and make me a pull request, please feel free. I appreciate submissions which include Junit tests, and will call you awesome if you include a UI test as well (not mandatory - I'm still ironing that bit out).
 

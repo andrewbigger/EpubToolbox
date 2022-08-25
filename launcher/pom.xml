@@ -71,21 +71,6 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>openjfx</id>
-            <activation>
-                <jdk>[11,)</jdk>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.openjfx</groupId>
-                    <artifactId>javafx-controls</artifactId>
-                    <version>11</version>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
     <dependencies>
         <dependency>
             <groupId>no.tornado</groupId>

@@ -143,9 +143,7 @@
                                 <argument>${app.vendor}</argument>
                                 <argument>-BappVersion=${app.version}</argument>
                                 <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
-                                <argument>-Bicon=${app.icon.osx}</argument>
-                                <argument>-Bicon=${app.icon.deb}</argument>
-                                <argument>-Bicon=${app.icon.win}</argument>
+                                <argument>-Bicon=${app.icon}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -228,22 +226,22 @@
     </build>
     <profiles>
         <profile>
-            <id>openjfx</id>
-            <activation>
-                <jdk>[11,)</jdk>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.openjfx</groupId>
-                    <artifactId>javafx-controls</artifactId>
-                    <version>11</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.openjfx</groupId>
-                    <artifactId>javafx-fxml</artifactId>
-                    <version>11</version>
-                </dependency>
-            </dependencies>
+            <id>macos</id>
+            <properties>
+                <app.icon>${app.icon.osx}</app.icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>debian</id>
+            <properties>
+                <app.icon>${app.icon.deb}</app.icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <app.icon>${app.icon.win}</app.icon>
+            </properties>
         </profile>
     </profiles>
     <dependencies>
